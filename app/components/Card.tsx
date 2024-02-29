@@ -8,7 +8,7 @@ export default function Card({ one }: any) {
         <h2 className="card-title text-[22px]">{one.title}</h2>
         <p className="text-[13px] mt-3">{one.para}</p>
         <div className="card-actions">
-          <button className="btn bg-[#f89b1f] text-black hover:text-white w-[159px] rounded-full h-[32px]">
+          <button className="btn bg-[#f89b1f] text-black hover:text-white w-[159px] hover:bg-black hover:border-[#f89b1f] rounded-full h-[32px]">
             {one.button}
           </button>
         </div>
