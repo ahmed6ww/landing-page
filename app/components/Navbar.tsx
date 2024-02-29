@@ -17,6 +17,7 @@ const Navbar = () => {
       <li><a>Security</a></li>
       <li><a>Roadmap</a></li>
       <li><a>FAQ's</a></li>
+      
       <li>
         <details >
           <summary>Other Links</summary>
@@ -27,10 +28,12 @@ const Navbar = () => {
             <li><a>Discord</a></li>
             <li><a>Instagram</a></li>
             <li><a>Telegram</a></li>
-            <li><a className="btn mt-4">Sign Up</a></li>
+            
           </ul>
         </details>
+
       </li>
+      <li><a className="btn mt-4">Sign Up</a></li>
       </ul>
     </div>
     <a className="bg-base-400 btn btn-ghost text-xl bg-black">Benefit Mine</a>
