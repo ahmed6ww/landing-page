@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 place-items-center mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 place-items-center mt-20 ">
         <Card one={cardProps1} />
         <Card one={cardProps2} />
         <Card one={cardProps3} />
