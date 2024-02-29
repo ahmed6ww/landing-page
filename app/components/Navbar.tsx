@@ -9,7 +9,7 @@ const Navbar = () => {
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div >
-      <ul tabIndex={0} className="bg-gray-900 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><a>Start</a></li>
       <li><a>About</a></li>
       <li><a>Platform Offering</a></li>
@@ -27,6 +27,7 @@ const Navbar = () => {
             <li><a>Discord</a></li>
             <li><a>Instagram</a></li>
             <li><a>Telegram</a></li>
+            <li><a className="btn mt-4">Sign Up</a></li>
           </ul>
         </details>
       </li>
@@ -43,6 +44,8 @@ const Navbar = () => {
       <li><a>Security</a></li>
       <li><a>Roadmap</a></li>
       <li><a>FAQ's</a></li>
+      
+      
       <li>
         <details className="">
           <summary >Other Links</summary>
@@ -53,6 +56,7 @@ const Navbar = () => {
             <li><a>Discord</a></li>
             <li><a>Instagram</a></li>
             <li><a>Telegram</a></li>
+            <li><a className="btn xl:hidden">Sign Up</a></li>
           </ul>
         </details>
       </li>
@@ -60,8 +64,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-4">
-    <a className="btn ">Buy BFM</a>
-    <a className="btn ">Sign Up</a>
+    <a className="btn  ">Buy $BFM</a>
+    <a className="btn hidden xl:flex">Sign Up</a>
   </div>
 </div>
     </>
