@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Platform from "./components/Platform";
 import Trustless from "./components/Trustless";
 import About from "./components/About"
-
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
@@ -12,6 +12,7 @@ export default function Home() {
       <About />
       <Platform />
       <Trustless/>
+      <Footer/>
     </>
   );
 }
