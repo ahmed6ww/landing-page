@@ -10,7 +10,7 @@ export default function Card({ one }: any) {
         title={one.href}
         href={one.href}
       >
-        <div className="card w-[18em] h-[17em] rounded-xl shadow-xl border border-primary">
+        <div className="card w-[16em] h-[17em] rounded-xl shadow-xl border border-primary">
           {/* Other card content */}
           <div className="card-body items-center text-center justify-center">
             <h2 className="card-title text-[1.5rem]">{one.title}</h2>

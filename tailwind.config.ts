@@ -17,7 +17,14 @@ const config: Config = {
         primary: '#f89b1f',
         secondary: '#EBECF0',
       },
-
+      screens: {
+        'xs': '400px',  // Custom breakpoint for extra small screens
+        'sm': '768px',
+        'md': '769px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
     
       
       

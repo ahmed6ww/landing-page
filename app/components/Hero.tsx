@@ -29,13 +29,13 @@ export default function Hero() {
 
     <>
 
-    <div className="min-h-screen min-w-screen text-white">
+    <div className="min-h-screen min-w-screen text-white overflow-x-hidden">
       {/* text */}
       <div>
         {/* First heading */}
         <div className="flex flex-col md:flex-row font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28">
-          <h1 className="text-[2rem] md:text-[75px]">The Home of</h1>
-          <h2 className="text-[3rem] md:text-[75px] text-[#f89b1f] "> Benefit Mine</h2>
+          <h1 className="text-[2rem] md:text-[50px]">The Home of</h1>
+          <h2 className="text-[3rem] md:text-[50px] text-[#f89b1f] "> Benefit Mine</h2>
         </div>
         {/* Second Heading */}
         <div className="text-[0.9rem] mt-[-1rem]  flex font-bold text-center justify-center">
