@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <>
-      <div className="navbar bg-base-400 drop-shadaow ">
-        <div className="navbar-start">
-          <div className="dropdown">
+    
+      <div className="navbar bg-base-400 drop-shadaow p-5 text-secondary">
+        <div className="navbar-start bg-black">
+          <div className="dropdown bg-black">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +26,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className=" bg-black menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
               <li>
                 <a>Start</a>
@@ -73,17 +75,22 @@ const Navbar = () => {
                   </ul>
                 </details>
               </li>
-              <li>
-                <a className="btn mt-4">Sign Up</a>
-              </li>
+              {/* <li>
+                <a
+                  className="btn mt-4 border-primary bg-transparent text-primary hover:bg-secondary
+                hover:text-black"
+                >
+                  Sign Up
+                </a>
+              </li> */}
             </ul>
           </div>
-          <a className="bg-base-400 btn btn-ghost text-xl bg-black">
-            Benefit Mine
-          </a>
+          <div>
+          <Image src="/logo.png" width={220} height={40} alt="Benefit Mine"  />
+          </div>
         </div>
         <div className="navbar-center  hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 ">
+          <ul className="menu menu-horizontal px-1">
             <li>
               <a>Start</a>
             </li>
@@ -109,7 +116,7 @@ const Navbar = () => {
             <li>
               <details className="">
                 <summary>Other Links</summary>
-                <ul className="p-2 bg-gray-900">
+                <ul className="p-2 bg-black ">
                   <li>
                     <a>Team</a>
                   </li>
@@ -137,8 +144,17 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <a className="btn  ">Buy $BFM</a>
-          <a className="btn hidden xl:flex">Sign Up</a>
+          <button className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)]" />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-3 py-1 text-[0.8rem] font-light text-white backdrop-blur-3xl">
+              BUY $BFM 
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-[0.25rem] w-5 h-4">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+</svg>
+
+            </span>
+          </button>
+          {/* <a className="btn ">Sign Up</a> */}
         </div>
       </div>
     </>
