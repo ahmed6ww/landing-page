@@ -4,13 +4,12 @@ import { platfrom } from "../Data";
 function Platform() {
   return (
     <div className="min-h-screen mx-auto flex flex-col items-center ">
-      
-      <div className=" text-4xl md:text-4xl     font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center justify-center md:mt-32 mt-28 ">
+      <div className=" text-4xl md:text-7xl     font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center justify-center md:mt-32 mt-28 ">
         <h1 className="text-white">
           Platform <span className="text-[#F89B1F]">Offerings</span>
         </h1>
       </div>
-      
+
       <div className="mt-32  space-y-9 mb-32 flex justify-center flex-col items-center">
         <h1 className="text-[#EBEBEB] text-3xl mx-5  text-center md:text-4xl font-bold">
           Discover the power of our TestNet
@@ -28,9 +27,10 @@ function Platform() {
       </div>
       {platfrom.map((cont, index) => {
         return (
-          <div key={index} className="  lg:w-[70%]  lg:grid-cols-2 mx-auto  ">
-            <div className="flex flex-col w-full lg:flex-row  lg:  ">
-              <div className="grid lg:grid-cols-2 p-8 flex-grow  bg-black mb-5 w-[350px] lg:divider-start lg:divider-end  card  rounded-box place-items-center">
+          <div key={index} className="  xl:w-[70%] lg:w-[95%]  lg:grid-cols-2 mx-auto  ">
+            <div className="flex flex-col  w-full lg:flex-row   lg:  ">
+              <div className="grid  lg:grid-cols-2 p-8 flex-grow   bg-black mb-5 w-[350px] lg:divider-start lg:divider-end  card  rounded-box place-items-center">
+              <div className="absolute inset-0 h-full w-full bg-gradient-to-r opacity-10 from-blue-900 to-teal-900 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
                 <div>
                   <Image
                     src={cont.image}
