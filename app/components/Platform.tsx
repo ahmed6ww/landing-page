@@ -27,10 +27,13 @@ function Platform() {
       </div>
       {platfrom.map((cont, index) => {
         return (
-          <div key={index} className="  xl:w-[70%] lg:w-[95%]  lg:grid-cols-2 mx-auto  ">
+          <div
+            key={index}
+            className="  xl:w-[70%] lg:w-[95%]  lg:grid-cols-2 mx-auto  "
+          >
             <div className="flex flex-col  w-full lg:flex-row   lg:  ">
               <div className="grid  lg:grid-cols-2 p-8 flex-grow   bg-black mb-5 w-[350px] lg:divider-start lg:divider-end  card  rounded-box place-items-center">
-              <div className="absolute inset-0 h-full w-full bg-gradient-to-r opacity-10 from-blue-900 to-teal-900 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+                <div className="absolute inset-0 h-full w-full bg-gradient-to-r opacity-10 from-blue-900 to-teal-900 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
                 <div>
                   <Image
                     src={cont.image}

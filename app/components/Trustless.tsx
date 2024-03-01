@@ -87,13 +87,20 @@ export default function Trustless() {
       </div>
       {/* Message */}
       <div className="flex flex-col md:flex-row md:gap-10 gap-5 items-center justify-center">
-
         <div className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
-          <img src="/111.png"alt="1" />
+          <img src="/111.png" alt="1" />
         </div>
         <div className="flex flex-col  gap-5 mb-32 md:mt-32">
-          <h1 className=" md:text-[2.5rem] text-[1.7rem] font-medium text-secondary text-start">Your assets, secured</h1>
-          <span className="text-start text-secondary text-[0.75rem] md:text-[1.2rem]  max-w-[260px] md:max-w-[750px]">Audited by the world's leading security firm,<strong className='text-[#F89B1F]'> Cyberscope</strong>, we're pleased to say that our score of<strong className='text-[#F89B1F]'> 9.3/10</strong>, makes us one of the safest projects coming to the market this year.</span>
+          <h1 className=" md:text-[2.5rem] text-[1.7rem] font-medium text-secondary text-start">
+            Your assets, secured
+          </h1>
+          <span className="text-start text-secondary text-[0.75rem] md:text-[1.2rem]  max-w-[260px] md:max-w-[750px]">
+            Audited by the world's leading security firm,
+            <strong className="text-[#F89B1F]"> Cyberscope</strong>, we're
+            pleased to say that our score of
+            <strong className="text-[#F89B1F]"> 9.3/10</strong>, makes us one of
+            the safest projects coming to the market this year.
+          </span>
         </div>
       </div>
     </div>

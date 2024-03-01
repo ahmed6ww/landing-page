@@ -5,6 +5,8 @@ import Trustless from "./components/Trustless";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Partners from "./components/Partners";
+import Form from "./components/Form";
+
 export default function Home() {
   return (
     <>
@@ -14,6 +16,7 @@ export default function Home() {
       <Platform />
       <Trustless />
       <Partners />
+      <Form />
       <Footer />
     </>
   );
