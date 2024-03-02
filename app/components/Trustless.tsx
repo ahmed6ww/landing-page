@@ -95,6 +95,7 @@ export default function Trustless() {
         initial="hidden"
         variants={fadeInUP}
         animate={inView ? "show" : "hidden"}
+        transition={{ staggerChildren: 0.1 }}
       >
         <HoverEffect
           items={featuredWebinars.map((webinar) => ({

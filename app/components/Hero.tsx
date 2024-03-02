@@ -46,10 +46,13 @@ export default function Hero() {
 
         {/* Cards */}
         {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 place-items-center mt-20 "> */}
-        <div className="flex flex-col lg:flex-row mt-[4em] mr-5 ml-5 gap-14 justify-around md:gap-0 md:mr-[4rem] md:ml-[4rem]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-[7em]   ">
           <Card one={cardProps1} />
           <Card one={cardProps2} />
-          <Card one={cardProps3} />
+          <div className="md:col-span-2 flex justify-center xl:col-span-1">
+    <Card one={cardProps3} />
+  </div>
+
         </div>
       </div>
     </>
