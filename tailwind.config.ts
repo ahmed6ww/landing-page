@@ -18,6 +18,7 @@ const config: Config = {
         secondary: '#EBECF0',
       },
       screens: {
+        'fold':'280px',
         'xs': '400px',  // Custom breakpoint for extra small screens
         'sm': '768px',
         'md': '769px',
