@@ -1,5 +1,11 @@
 export const platfrom = [
     {
+        label:'Discover the power of our TestNet',
+        content:"Your opportunity to shape the future of crypto trading. Explore our platform valuable feedback, and be part of the revolution. Join us now and experience the innovation firsthand.",
+        button:'Join Now'   ,
+        image:'/token.png' 
+    },
+    {
         label:'User Are Partners',
         content:'Unlock your earning potential through our unique token burning program. By participating in the token burning mechanism, you can get a share of the Exchange"s lucrative income streams.',
         button:'LEARN MORE ABOUT IT'   ,

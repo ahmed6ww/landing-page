@@ -3,9 +3,9 @@ import { FaDiscord, FaInstagram, FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 text-base-content bg-black border-t-[0.01px]   border-gray-900 ">
+    <footer className="footer p-10  bg-black text-gray-500 border-t-[0.01px]   border-gray-900 ">
       <nav>
-        <h6 className="footer-title">Follow Us</h6>
+        <h6 className="footer-title text-gray-200 text-[1rem]">Follow Us</h6>
         <Link href="/" className="link link-hover">
           Telegram group
         </Link>
@@ -29,19 +29,19 @@ const Footer = () => {
         </Link>
       </nav>
       <nav>
-        <h6 className="footer-title">Support</h6>
+        <h6 className="footer-title text-gray-200 text-[1rem]">Support</h6>
         <Link href="/" className="link link-hover">
           FAQ's
         </Link>
       </nav>
       <nav>
-        <h6 className="footer-title">About Us</h6>
+        <h6 className="footer-title text-gray-200 text-[1rem]">About Us</h6>
         <Link href="/" className="link link-hover">
           Team
         </Link>
       </nav>
       <nav>
-        <h6 className="footer-title">Social</h6>
+        <h6 className="footer-title text-gray-200 text-[1rem]">Social</h6>
         <div className="grid grid-flow-col gap-4">
           <Link href="/">
             <svg
