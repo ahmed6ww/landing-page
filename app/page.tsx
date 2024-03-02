@@ -13,6 +13,7 @@ export default function Home() {
       <About /> 
       <Platform />
       <Trustless />
+      <Roadmap />
       <Faqs />
     </>
   );
