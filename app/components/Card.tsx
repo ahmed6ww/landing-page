@@ -2,7 +2,6 @@
 import React from "react";
 import { PinContainer } from "@/app/components/ui/3d-pin";
 
-
 export default function Card({ one }: any) {
   return (
     <div className=" flex items-center rounded-xl justify-center p-8">
@@ -19,7 +18,6 @@ export default function Card({ one }: any) {
               <button className="btn bg-primary text-black border-black hover:text-white w-[12em] font-sans font-medium hover:bg-black hover:border-[#f89b1f] rounded-full h-[32px]">
                 {one.button}
               </button>
-      
             </div>
           </div>
         </div>

@@ -7,8 +7,8 @@ export function TypewriterEffectSmoothDemo() {
       className: "text-primary dark:text-primary",
     },
     {
-        text: "Business",
-        className: "text-primary dark:text-primary",
+      text: "Business",
+      className: "text-primary dark:text-primary",
     },
     {
       text: "Our",
@@ -19,7 +19,5 @@ export function TypewriterEffectSmoothDemo() {
       className: "text-secondary dark:text-secondary",
     },
   ];
-  return (
-      <TypewriterEffectSmooth words={words} />
-  );
+  return <TypewriterEffectSmooth words={words} />;
 }
