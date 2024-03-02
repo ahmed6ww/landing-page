@@ -5,7 +5,7 @@ import { PinContainer } from "@/app/components/ui/3d-pin";
 
 export default function Card({ one }: any) {
   return (
-    <div className=" flex items-center rounded-xl justify-center p-8">
+    <div className="flex items-center rounded-xl justify-center p-8">
       <PinContainer
         title={one.href}
         href={one.href}

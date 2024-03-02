@@ -33,7 +33,7 @@ export default function Hero() {
       {/* text */}
       <div>
         {/* First heading */}
-        <div className="flex flex-col md:flex-row font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28">
+        <div className="flex flex-col lg:flex-row font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28">
           <h1 className="text-[2rem] md:text-[75px]">The Home of</h1>
           <h2 className="text-[3rem] md:text-[75px] text-primary "> Benefit Mine</h2>
         </div>
@@ -48,7 +48,7 @@ export default function Hero() {
 
       {/* Cards */}
       {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 place-items-center mt-20 "> */}
-      <div className="flex flex-col md:flex-row mt-[4em] mr-5 ml-5 gap-14 justify-around md:gap-0 md:mr-[4rem] md:ml-[4rem]">
+      <div className="flex flex-col lg:flex-row mt-[4em] mr-5 ml-5 gap-14 justify-around md:gap-0 md:mr-[4rem] md:ml-[4rem]">
         <Card one={cardProps1} />
         <Card one={cardProps2} />
         <Card one={cardProps3} />
