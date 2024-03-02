@@ -68,10 +68,10 @@ export default function Trustless() {
     <div className="max-w-4xl mx-auto h-full flex flex-col items-center ">
       {/* Text */}
       <div className="flex flex-col md:flex-row items-center  text-[33px] md:text-[65px]  font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28 ">
-        <h1 className="text-[2rem] lg:text-[3rem] text-secondary">TRUSTLESS </h1>
-        <h1 className="text-[1rem] lg:text-[2rem]">AND </h1>
-        <h2 className="text-[2rem] lg:text-[3rem] text-[#f89b1f] ">
-          TRANSPARENT
+        <h1 className="text-[2rem] lg:text-[4rem] text-white">Trustless </h1>
+        <h1 className="text-[1rem] lg:text-[3rem]">And </h1>
+        <h2 className="text-[2rem] lg:text-[4rem] text-[#f89b1f] ">
+          Transparent
         </h2>
       </div>
       {/* Cards       */}
@@ -87,7 +87,7 @@ export default function Trustless() {
       </div>
       {/* Message */}
       <div className="flex flex-col md:flex-row md:gap-10 gap-5 items-center justify-center">
-
+        
         <div className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
           <img src="/111.png"alt="1" />
         </div>
