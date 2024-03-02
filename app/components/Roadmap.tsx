@@ -78,7 +78,7 @@ export default function Roadmap() {
 
   return (
     <>
-      <div className=' text-[3rem] md:text-[4rem]  font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 '>
+      <div className=' text-[3rem] font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 '>
   
   <h1 className='text-white'>Our <span className='text-[#F89B1F]'>Roadmap</span></h1>
   </div>
