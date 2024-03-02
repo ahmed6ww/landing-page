@@ -1,15 +1,50 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const Form = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  const fadeInUP: Variants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.3,
+      },
+    },
+  };
   return (
     <div className="hero min-h-[40em]  bg-black ">
       <div className="hero-content flex-col lg:flex-row-reverse  ">
-        <div className="text-center lg:text-left lg:ml-20 xl:ml-32 ">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold ">
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          variants={fadeInUP}
+          animate={inView ? "show" : "hidden"}
+          className="text-center lg:text-left lg:ml-20 xl:ml-32 "
+        >
+          <motion.h1
+            variants={fadeInUP}
+            className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold "
+          >
             STAY UP TO DATE WITH ALL THE LATEST NEWS
-          </h1>
-          <p className="py-6 text-secondary font-sans">
+          </motion.h1>
+          <motion.p
+            variants={fadeInUP}
+            className="py-6 text-secondary font-sans"
+          >
             SIGN UP BELOW TO RECEIVE ALL THE LATEST UPDATES FROM BENEFIT MINE HQ
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         <div className="card shrink-0 w-[15em] md:w-[25em]  flex  max-w-sm shadow-2xl border text-secondary border-primary">
           <form className="card-body ">
             <div className="form-control">
@@ -25,7 +60,9 @@ const Form = () => {
             </div>
 
             <div className="form-control mt-6">
-              <button className="btn border-primary bg-black text-secondary hover:bg-primary hover:border-primary hover:text-black">Register</button>
+              <button className="btn border-primary bg-black text-secondary hover:bg-primary hover:border-primary hover:text-black">
+                Register
+              </button>
             </div>
           </form>
         </div>

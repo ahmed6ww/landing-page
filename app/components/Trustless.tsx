@@ -2,8 +2,25 @@
 import React from "react";
 import { HoverEffect } from "./ui/card-hover-effect";
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Trustless() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  const fadeInUP: Variants = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+      },
+    },
+  };
   const featuredWebinars = [
     {
       title: "User Regestration",
@@ -70,12 +87,15 @@ export default function Trustless() {
       <div className="flex flex-col md:flex-row items-center  text-[33px] md:text-[65px]  font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28 ">
         <h1 className="text-[3rem] text-white">Trustless </h1>
         <h1 className="text-[2rem]">And </h1>
-        <h2 className="text-[3rem] text-[#f89b1f] ">
-          Transparent
-        </h2>
+        <h2 className="text-[3rem] text-[#f89b1f] ">Transparent</h2>
       </div>
       {/* Cards       */}
-      <div>
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        variants={fadeInUP}
+        animate={inView ? "show" : "hidden"}
+      >
         <HoverEffect
           items={featuredWebinars.map((webinar) => ({
             title: webinar.title,
@@ -84,10 +104,9 @@ export default function Trustless() {
           }))}
           className=""
         />
-      </div>
+      </motion.div>
       {/* Message */}
       <div className="flex flex-col md:flex-row md:gap-10 gap-5 items-center justify-center">
-        
         <div className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
           <img src="/111.png" alt="1" />
         </div>
@@ -107,4 +126,3 @@ export default function Trustless() {
     </div>
   );
 }
-
