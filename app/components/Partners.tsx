@@ -35,10 +35,10 @@ const Partners = () => {
         initial="hidden"
         variants={fadeInUP}
         animate={inView ? "show" : "hidden"}
-        className=" xs:timeline xs:timeline-middle md:text-3xl lg:text-4xl text-lg sm:text-xl w-64 xs:text-lg xs:w-auto   font-semibold  mt-60 h-[600px]  xs:timeline-vertical "
+        className=" xs:timeline xs:timeline-middle text-slate-100 md:text-3xl lg:text-4xl text-lg sm:text-xl w-64 xs:text-lg xs:w-auto   font-semibold  mt-60 h-[600px]  xs:timeline-vertical "
       >
         <MotionLi variants={fadeInUP}>
-          <div className="timeline-start xs:bg-transparent xs:h-20   md:h-36 md:w-96 p-5 xs:timeline-box flex items-center">
+          <div className="timeline-start xs:bg-transparent xs:h-20    md:h-36 md:w-96 p-5 xs:timeline-box flex items-center">
             <Image
               src="/token.png"
               height={195}
