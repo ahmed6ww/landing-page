@@ -67,17 +67,17 @@ const Accordion = () => {
         </div>
       </div>
 
-      {/* <div className="absolute md:top-40 z-[-2] md:left-0 bottom-0">
+      <div className="absolute md:top-6 bottom-0 left-0 z-[-2]  ">
         <svg
           width="1240"
-          height="426"
+          height="526"
           viewBox="0 0 1440 886"
-          fill="none"
+          fill="#f89b1f"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             opacity="0.2"
-            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+            d="M193.307 -273.321L1480.1 1014.24L1121.1 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
             fill="url(#paint0_linear)"
           />
           <defs>
@@ -89,13 +89,13 @@ const Accordion = () => {
               y2="-418.681"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3056D3" stop-opacity="0.36" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+              <stop stop-color={"#f89b1f"} stop-opacity="0.36" />
+              <stop offset="1" stop-color="#f89b1f" stop-opacity="0" />
+              <stop offset="1" stop-color="primary" stop-opacity="0.096144" />
             </linearGradient>
           </defs>
         </svg>
-      </div> */}
+      </div>
     </section>
   );
 };
