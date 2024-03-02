@@ -3,7 +3,7 @@ function Platform() {
     return (
       <div className="min-h-screen flex justify-center flex-col items-center">
   
-  <div className=' text-[3rem] md:text-[4rem]  font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 '>
+  <div className=' text-[3rem]  font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 '>
   
   
   <h1 className='text-white'>Platform <span className='text-[#F89B1F]'>Offerings</span></h1>
