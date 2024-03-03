@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode; 
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} bg-black`}>{children}</body>
+      <body className={`${montserrat.className} bg-black overflow-x-hidden`}>{children}</body>
     </html>
   );
 }
