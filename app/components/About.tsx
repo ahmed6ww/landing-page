@@ -14,6 +14,9 @@ export function About() {
     show: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
   return (
+
+    <>
+
     <motion.div
       initial="hidden"
       animate="show"
@@ -48,6 +51,11 @@ export function About() {
         </span>
       </motion.p>
     </motion.div>
+
+   
+     
+    </>
+
   );
 }
 

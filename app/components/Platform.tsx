@@ -29,7 +29,7 @@ function Platform() {
     <>
       {" "}
       <div className="min-h-screen mx-auto flex flex-col items-center ">
-        <div className=" text-4xl md:text-7xl     font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center justify-center md:mt-32 mt-28 ">
+        <div className=" text-[3rem] font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 ">
           <h1 className="text-white">
             Platform <span className="text-[#F89B1F]">Offerings</span>
           </h1>

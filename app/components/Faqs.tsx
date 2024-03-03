@@ -6,7 +6,7 @@ const Accordion = () => {
     <section className=" overflow-x-hidden relative z-20 mt-40 bg-black  dark:bg-dark  ">
       <div className=" flex flex-col items-center justify-center">
         <span className="mb-2 block text-[3rem] font-semibold text-primary">
-          FAQ ' S1
+          FAQ ' S
         </span>
 
         <div className=" mt-20  md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out ">

@@ -30,8 +30,8 @@ export default function Hero() {
         <div>
           {/* First heading */}
           <div className="flex flex-col md:flex-row font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28">
-            <h1 className="text-[2rem] md:text-[3rem]">The Home of</h1>
-            <h2 className="text-[2.8rem] md:text-[3rem] text-[#f89b1f] ">
+            <h1 className="text-[2rem] md:text-[4rem]">The Home of</h1>
+            <h2 className="text-[2.8rem] md:text-[4rem] text-[#f89b1f] ">
               {" "}
               Benefit Mine
             </h2>
