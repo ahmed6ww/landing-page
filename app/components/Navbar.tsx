@@ -85,7 +85,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <Image src="/logo.png" width={220} height={40} alt="Benefit Mine" />
+            <img src="/logo.png" className="w-[170px] h-[25px] md:w-[170px] md:h-[25px]"  alt="Benefit Mine" />
           </div>
         </div>
         <div className="navbar-center  hidden lg:flex">

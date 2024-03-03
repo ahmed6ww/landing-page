@@ -18,8 +18,8 @@ export default function Home() {
       <Platform />
       <Trustless />
       <Roadmap />
-      <Faqs />
       <Partners />
+      <Faqs />
       <Form />
       <Footer />
     </>
