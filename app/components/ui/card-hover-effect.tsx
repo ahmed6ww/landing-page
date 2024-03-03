@@ -66,16 +66,17 @@ export const Card = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div
+    <motion.div
       className={cn(
         "rounded-2xl w-[264px] h-[250px] p-4 overflow-hidden bg-black border border-primary group-hover:border-primary relative z-20",
         className
       )}
+      
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export const CardTitle = ({

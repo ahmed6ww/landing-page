@@ -1,16 +1,41 @@
+"use client";
 import Image from "next/image";
 import { platfrom } from "../Data";
 
-function Platform() {
-  return (
-    <>    <div className="min-h-screen mx-auto flex flex-col items-center ">
-      <div className=" text-4xl md:text-7xl     font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center justify-center md:mt-32 mt-28 ">
-        <h1 className="text-white">
-          Platform <span className="text-[#F89B1F]">Offerings</span>
-        </h1>
-      </div>
+import { Variants, motion } from "framer-motion";
 
-      {/*<div className="mt-32  space-y-9 mb-32 flex justify-center flex-col items-center">
+import { useInView } from "react-intersection-observer";
+
+function Platform() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  const fadeInUP: Variants = {
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.6,
+      },
+    },
+  };
+  return (
+    <>
+      {" "}
+      <div className="min-h-screen mx-auto flex flex-col items-center ">
+        <div className=" text-4xl md:text-7xl     font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center justify-center md:mt-32 mt-28 ">
+          <h1 className="text-white">
+            Platform <span className="text-[#F89B1F]">Offerings</span>
+          </h1>
+        </div>
+
+        {/*<div className="mt-32  space-y-9 mb-32 flex justify-center flex-col items-center">
         <h1 className="text-[#EBEBEB] text-3xl mx-5  text-center md:text-4xl font-bold">
           Discover the power of our TestNet
         </h1>
@@ -61,37 +86,47 @@ function Platform() {
         );
       })}*/}
 
-      <div className="flex flex-col m-4 p-8 mt-[1rem]">
-        {platfrom.map((cont, index) => {
-          return (
-            <div className="flex flex-col md:flex-row  max-w-6xl mt-[6rem] p-4 md:even:flex-row-reverse md:even:text-right  items-center justify-center  ">
-              <Image
-                src={cont.image}
-                height={255}
-                width={255}
-                alt="Image"
-                className="w-[400px] "
-              />
-              <div className="flex flex-col w-80%] md:w-[40%] ">
-                <h3 className="text-[2rem] mt-2 font-bold text-primary">
-                  {cont.label}
-                </h3>
-                <p className="text-[0.9rem] mt-4 text-secondary">{cont.content}</p>
-                <div>
-                <button className="btn bg-primary text-black border-black mt-4 hover:text-white w-[14em] font-sans font-medium hover:bg-black hover:border-[#f89b1f] rounded-full h-[32px]">
-                  {cont.button}
-                </button>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          variants={fadeInUP}
+          animate={inView ? "show" : "hidden"}
+          className="flex flex-col m-4 p-8 mt-[1rem]"
+        >
+          {platfrom.map((cont, index) => {
+            return (
+              <>
+                <motion.div
+                  variants={fadeInUP}
+                  className="flex flex-col md:flex-row  max-w-6xl mt-[6rem] p-4 md:even:flex-row-reverse md:even:text-start  items-center justify-center  "
+                >
+                  <Image
+                    src={cont.image}
+                    height={255}
+                    width={255}
+                    alt="Image"
+                    className="w-[400px] "
+                  />
+                  <div className="flex flex-col w-80%] md:w-[40%] ">
+                    <h3 className="text-[2rem] mt-2 font-bold text-primary">
+                      {cont.label}
+                    </h3>
+                    <p className="text-[0.9rem] mt-4 text-secondary">
+                      {cont.content}
+                    </p>
+                    <div>
+                      <button className="btn bg-primary text-black border-black mt-4 hover:text-white w-[14em] font-sans font-medium hover:bg-black hover:border-[#f89b1f] rounded-full h-[32px]">
+                        {cont.button}
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              </>
+            );
+          })}
+        </motion.div>
       </div>
-    </div>
-
-   
-            </>
-
+    </>
   );
 }
 
