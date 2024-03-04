@@ -10,7 +10,7 @@ const Accordion = () => {
     triggerOnce: true,
   });
   return (
-    <section className=" overflow-x-hidden relative z-20 mt-40 bg-black  dark:bg-dark  ">
+    <section className=" overflow-x-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
       <div className=" flex flex-col items-center justify-center">
         <motion.div
        ref={ref}
@@ -26,7 +26,7 @@ const Accordion = () => {
         },
       }}>
 
-        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3rem] font-bold text-primary">
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3.5rem] font-bold text-primary">
           FAQ ' S
         </motion.h1>
         </motion.div>
