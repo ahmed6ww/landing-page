@@ -101,7 +101,7 @@ export default function Trustless() {
         {/* <h1 className="text-[3rem] text-white">Trustless </h1>
         <h1 className="text-[2rem]">And </h1>
         <h2 className="text-[3rem] text-[#f89b1f] ">Transparent</h2> */}
-        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-white text-[3.5rem]">
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-white p-1 text-[3.014rem]">
             Trustless & <span className="text-[#F89B1F]">Transparent</span>
           </motion.h1>
       </motion.div>
