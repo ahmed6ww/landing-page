@@ -123,6 +123,7 @@ function Platform() {
                     style={{ width: "300px", height: "250px",}}
                     loop
                     muted
+                    controls={false}
                   >
                     <source src={cont.video} />
                   </video>
