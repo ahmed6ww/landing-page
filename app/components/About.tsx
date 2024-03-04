@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
 export function About() {
 
@@ -9,31 +10,27 @@ export function About() {
     triggerOnce: true,
   });
 
-  const FADE_UP_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { type: "spring" } },
-  };
   return (
 
     <>
 
     <motion.div
+       ref={ref}
       initial="hidden"
-      animate="show"
+      animate={inView ? "show" : "hidden"}
       viewport={{ once: true }}
       variants={{
         hidden: {},
         show: {
-          transition: { 
-            duration: 20,
-            staggerChildren: 0.6,
+          transition: {
+            staggerChildren: 0.15,
           },
         },
       }}
       className="mt-[8rem] p-5  text-white md:mt-[5em] text-2xl md:text-3xl text-left   
       md:mr-[40%] md:ml-[15%] md:w-[25em]"
     >
-      <motion.p ref={ref}  initial="hidden" animate={inView ? "show" : "hidden"} variants={FADE_UP_ANIMATION_VARIANTS}>
+      <motion.p variants={FADE_DOWN_ANIMATION_VARIANTS}>
         <span>
           At Benefit Mine, we{" "}
           <strong className="text-[#F89B1F]">constantly</strong> strive to
