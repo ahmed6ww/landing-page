@@ -123,6 +123,8 @@ function Platform() {
                     style={{ width: "300px", height: "250px",}}
                     loop
                     muted
+                    autoPlay
+                    playsInline
                     controls={false}
                   >
                     <source src={cont.video} />
