@@ -1,13 +1,35 @@
 "use client";
 import React, { useState } from "react";
+import { Variants, motion } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
 const Accordion = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
     <section className=" overflow-x-hidden relative z-20 mt-40 bg-black  dark:bg-dark  ">
       <div className=" flex flex-col items-center justify-center">
-        <span className="mb-2 block text-[3rem] font-semibold text-primary">
-          FAQ ' S1
-        </span>
+        <motion.div
+       ref={ref}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }}>
+
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3rem] font-bold text-primary">
+          FAQ ' S
+        </motion.h1>
+        </motion.div>
 
         <div className=" mt-20  md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out ">
           <div className="">
@@ -105,7 +127,7 @@ export default Accordion;
 const AccordionItem = ({ header, text }: any) => {
   const [active, setActive] = useState(false);
 
-  const handleToggle = () => {
+  const handleToggle = (event:any) => {
     event.preventDefault();
     setActive(!active);
   };
@@ -114,7 +136,7 @@ const AccordionItem = ({ header, text }: any) => {
       <div className="flex flex-col items-center justify-center ">
         <button
           className={`faq-btn flex items-center w-full text-left `}
-          onClick={() => handleToggle()}
+          onClick={(e) => handleToggle(e)}
         >
           <div className="mr-5 flex h-7 w-full max-w-[30px] items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5">
             <svg

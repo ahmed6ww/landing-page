@@ -19,16 +19,16 @@ export default function TimelineElement({title, points} : Phase ) {
     <div ref={ref} className="vertical-timeline-element">
       <VerticalTimelineElement
          contentStyle={{
-            background: 'rgb(22 22 22)',
+            background: 'black',
             color: "white",
             boxShadow: 'none',
-            border: '1px solid rgba(0, 0, 0, 0.05)',
+            border: '1px solid #f89b1f',
             textAlign: 'left',
             padding: '1.3rem 2rem',
             borderRadius: '15px',
           }}
           contentArrowStyle={{
-            borderRight: '14px solid rgb(22 22 22)',
+            borderRight: '14px solid #f89b1f',
           }}
         icon={<p className="text-center flex justify-center items-center"></p>}
         iconStyle={{
