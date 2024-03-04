@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { HoverEffect } from "./ui/card-hover-effect";
-import Image from "next/image";
+import { BackgroundGradient } from "@/lib/background-gradient";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation";
+import data from "@/app/securityData.json";
 
 export default function Trustless() {
   const { ref, inView } = useInView({
@@ -22,88 +22,40 @@ export default function Trustless() {
       },
     },
   };
-  const featuredWebinars = [
-    {
-      title: "User Regestration",
-      description: "Kick start your journey. Create an Account with us.",
-      isFeatured: true,
-    },
-    {
-      title: "Account Verification",
-      description:
-        "Verify your account, ensure safety, and unloack limitless opportunities",
-      slug: "the-art-of-songwriting",
-      isFeatured: true,
-    },
-    {
-      title: "Security Setup ",
-      description: "Enhance your safety by enabling two-factor authentication.",
-      slug: "mastering-your-instrument",
-      isFeatured: true,
-    },
-    {
-      title: "Wallet Creation",
-      description:
-        "Create your Wallet, your Gateway to the world of Cryptocurrency",
-      slug: "music-production-essentials",
-      isFeatured: true,
-    },
-    // Added two more webinars
-    {
-      title: "Deposit Fund",
-      description:
-        "Fuel your Wallet, deposit funds and start your crypto journey.",
-      slug: "live-performance-techniques",
-      isFeatured: true,
-    },
-    {
-      title: "Explore Markets",
-      description: "Discover new horizons, explore the vibrant crypto market.",
-      slug: "digital-music-marketing",
-      isFeatured: true,
-    },
-    {
-      title: "Choose Cryptocurrency",
-      description: "Be Selective choose yourpreferred Cryptocurrency.",
-      slug: "digital-music-marketing",
-      isFeatured: true,
-    },
-    {
-      title: "Trade Execution",
-      description: "Dive into action, execute your first trade.",
-      slug: "digital-music-marketing",
-      isFeatured: true,
-    },
-    {
-      title: "Order Confirmation",
-      description:
-        "Confidence in every transaction, recieve immediate order confirmation.",
-      slug: "digital-music-marketing",
-      isFeatured: true,
-    },
-  ];
+  interface FeaturedData {
+    id: number;
+    title: string;
+    description: string;
+    isFeatured: boolean;
+  }
+  const featuredData = data.courses.filter(
+    (course: FeaturedData) => course.isFeatured
+  );
+
   return (
     <div className="max-w-4xl mx-auto h-full flex flex-col items-center ">
       {/* Text */}
       <motion.div
-      ref={ref}
-     initial="hidden"
-     animate={inView ? "show" : "hidden"}
-     viewport={{ once: true }}
-     variants={{
-       hidden: {},
-       show: {
-         transition: {
-           staggerChildren: 0.15,
-         },
-       },
-     }} className="flex flex-col md:flex-row items-center  text-[33px] md:text-[65px]  font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28 ">
-        {/* <h1 className="text-[3rem] text-white">Trustless </h1>
-        <h1 className="text-[2rem]">And </h1>
-        <h2 className="text-[3rem] text-[#f89b1f] ">Transparent</h2> */}
-        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-white text-[3.5rem]">
-            Trustless & <span className="text-[#F89B1F]">Transparent</span>
-          </motion.h1>
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+        className="flex flex-col md:flex-row items-center  text-[33px] md:text-[65px]  font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28 "
+      >
+        <motion.h1
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
+          className="text-white text-[3.5rem]"
+        >
+          Trustless & <span className="text-[#F89B1F]">Transparent</span>
+        </motion.h1>
       </motion.div>
       {/* Cards       */}
       <motion.div
@@ -113,14 +65,22 @@ export default function Trustless() {
         animate={inView ? "show" : "hidden"}
         transition={{ staggerChildren: 0.1 }}
       >
-        <HoverEffect
-          items={featuredWebinars.map((webinar) => ({
-            title: webinar.title,
-            description: webinar.description,
-            link: "/",
-          }))}
-          className=""
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-content-center place-items-center ml-1 mr-1 mt-16">
+          {featuredData.map((course: FeaturedData) => (
+            <div key={course.id} className="flex justify-center items-center">
+              <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-[250px] w-[200px] max-w-sm">
+                <div className="p-4 sm:p-6 flex flex-col items-center text-center  flex-grow ">
+                  <p className="text-lg sm:text-xl text-black mt-4 mb-4  dark:text-neutral-200 pl-8 pr-8">
+                    {course.title}
+                  </p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
+                    {course.description}
+                  </p>
+                </div>
+              </BackgroundGradient>
+            </div>
+          ))}
+        </div>
       </motion.div>
       {/* Message */}
       <div className="flex flex-col md:flex-row md:gap-10 gap-5 items-center justify-center">
@@ -143,3 +103,4 @@ export default function Trustless() {
     </div>
   );
 }
+
