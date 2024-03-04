@@ -5,6 +5,8 @@ import { platfrom } from "../Data";
 import { Variants, motion } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
+
 
 function Platform() {
   const { ref, inView } = useInView({
@@ -14,14 +16,14 @@ function Platform() {
   const fadeInUP: Variants = {
     hidden: {
       opacity: 0,
-      x: 100,
+      y: -20,
     },
     show: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 0.8,
-        staggerChildren: 0.6,
+        staggerChildren: 1.15,
       },
     },
   };
@@ -29,11 +31,23 @@ function Platform() {
     <>
       {" "}
       <div className="min-h-screen mx-auto flex flex-col items-center ">
-        <div className=" text-[3rem] font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 ">
-          <h1 className="text-white">
+        <motion.div
+       ref={ref}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }} className=" text-[3rem] font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 ">
+          <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-white text-[3.5rem]">
             Platform <span className="text-[#F89B1F]">Offerings</span>
-          </h1>
-        </div>
+          </motion.h1>
+        </motion.div>
 
         {/*<div className="mt-32  space-y-9 mb-32 flex justify-center flex-col items-center">
         <h1 className="text-[#EBEBEB] text-3xl mx-5  text-center md:text-4xl font-bold">
