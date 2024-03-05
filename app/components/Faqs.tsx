@@ -132,7 +132,7 @@ const AccordionItem = ({ header, text }: any) => {
     setActive(!active);
   };
   return (
-    <div className="mb-8 md:w-[428px]  w-[300px] rounded-lg bg-[#161616] hover:bg-black p-3 hover:border-primary hover:border  hover:duration-1000 hover:ease-in  shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]  ">
+    <div className="mb-8 md:w-[428px]  w-[300px] rounded-lg bg-[#161616] hover:bg-black p-3 hover:border-primary hover:border  hover:duration-1000 hover:ease-in   dark:bg-dark-2  ">
       <div className="flex flex-col items-center justify-center ">
         <button
           className={`faq-btn flex items-center w-full text-left `}
@@ -164,7 +164,7 @@ const AccordionItem = ({ header, text }: any) => {
             active ? "block" : "hidden"
           }`}
         >
-          <p className="py-3 text-[0.7rem] duration-1000 ease-in-out  leading-relaxed text-body-color dark:text-dark-6 ">
+          <p className="py-3 text-[0.7rem] duration-1000 ease-in-out text-gray-400 leading-relaxed text-body-color dark:text-dark-6 ">
             {text}
           </p>
         </div>

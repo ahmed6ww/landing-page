@@ -123,7 +123,7 @@ export default function Trustless() {
         />
       </motion.div>
       {/* Message */}
-      <div className="flex flex-col md:flex-row md:gap-10 gap-5 items-center justify-center">
+      {/* <div className="flex flex-col md:flex-row md:gap-10 gap-5 items-center justify-center">
         <div className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
           <img src="/111.png" alt="1" />
         </div>
@@ -139,7 +139,7 @@ export default function Trustless() {
             the safest projects coming to the market this year.
           </span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

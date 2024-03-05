@@ -137,7 +137,7 @@ function Platform() {
                       {cont.content}
                     </p>
                     <div>
-                      <button className="btn bg-black text-secondary border-primary mt-7 hover:text-black w-[14em] font-sans font-medium hover:bg-primary hover:border-[#f89b1f] rounded-full h-[32px]">
+                      <button className="btn bg-black text-secondary border-primary mt-7 hover:text-black w-[14em] font-sans font-medium hover:bg-primary hover:border-[#f89b1f] rounded-full h-[32px] duration-500">
                         {cont.button}
                       </button>
                     </div>
