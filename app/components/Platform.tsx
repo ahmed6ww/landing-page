@@ -119,10 +119,13 @@ function Platform() {
                   className="flex flex-col md:flex-row gap-10  max-w-6xl mt-[6rem] p-4 md:even:flex-row-reverse md:even:text-start  items-center justify-center "
                 >
                   <video
-                    autoPlay
+                    
                     style={{ width: "300px", height: "250px",}}
                     loop
                     muted
+                    autoPlay
+                    playsInline
+                    controls={false}
                   >
                     <source src={cont.video} />
                   </video>

@@ -19,7 +19,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 py-20 ",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 py-20",
         className
       )}
     >
@@ -27,14 +27,14 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group  block p-3 h-full w-full"
+          className="relative group  block p-3 h-full w-full "
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-black dark:bg-primary block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-black dark:bg-primary block  rounded-3xl "
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -68,7 +68,7 @@ export const Card = ({
   return (
     <motion.div
       className={cn(
-        "rounded-2xl w-[264px] h-[250px] p-4 overflow-hidden bg-black border border-primary group-hover:border-primary relative z-20",
+        "rounded-2xl w-[264px] h-[250px] p-4 overflow-hidden bg-black border border-primary group-hover:border-primary relative z-20 animateBorder ",
         className
       )}
       
