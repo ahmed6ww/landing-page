@@ -8,6 +8,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Partners from "./components/Partners";
 import Form from "./components/Form";
+import Security from "./components/Security";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <About /> 
       <Platform />
       <Trustless />
+      <Security />
       <Roadmap />
       <Partners />
       <Faqs />
