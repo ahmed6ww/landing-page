@@ -54,13 +54,13 @@ const Form = () => {
               <input
                 type="email"
                 placeholder="email"
-                className="input input-bordered bg-black border-secondary"
+                className="input input-bordered bg-black border-secondary focus:border-primary"
                 required
               />
             </div>
 
             <div className="form-control mt-6">
-              <button className="btn border-primary bg-black text-secondary hover:bg-primary hover:border-primary hover:text-black">
+              <button className="btn duration-500 border-primary bg-black text-secondary hover:bg-primary hover:border-primary hover:text-black">
                 Register
               </button>
             </div>

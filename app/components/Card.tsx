@@ -35,7 +35,7 @@ export default function Card({ one }: any) {
             <h2 className="card-title text-[1.5rem] text-secondary">{one.title}</h2>
             <p className={`${openSans.className} text-[13px] w-[17em] mt-5 text-secondary`}>{one.para}</p>
             <div className="card-actions">
-              <button className="btn bg-primary text-black border-black hover:text-white w-[12em] font-sans font-medium hover:bg-black hover:border-[#f89b1f] rounded-full h-[32px] ">
+              <button className="btn bg-primary text-black border-black hover:text-white w-[12em] font-sans font-medium hover:bg-black hover:border-[#f89b1f] rounded-full h-[32px] duration-500 ">
                 {one.button}
               </button>
             </div>
