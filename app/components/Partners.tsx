@@ -3,7 +3,8 @@ import Image from "next/image";
 import { MotionUl, MotionLi } from "@/lib/motiondDiv";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation";
+import Marquee from "react-fast-marquee";
 
 const Partners = () => {
   const { ref, inView } = useInView({
@@ -24,90 +25,68 @@ const Partners = () => {
     },
   };
   return (
-    <div className=" max-w-full ">
+    // <div className=" max-w-full ">
+    <>
+      {" "}
       <motion.div
-       ref={ref}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-      viewport={{ once: true }}
-      variants={{
-        hidden: {},
-        show: {
-          transition: {
-            staggerChildren: 0.15,
+        ref={ref}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
           },
-        },
-      }} className=" text-5xl md:text-7xl text-center      font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center  justify-center md:mt-32 mt-28 ">
-        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="text-white text-[3.5rem]">
+        }}
+        className=" text-5xl md:text-7xl text-center font-bold md:gap-5 gap-0 md:min-w-[949px] flex items-center  justify-center md:mt-32 mt-28 "
+      >
+        <motion.h1
+          variants={FADE_DOWN_ANIMATION_VARIANTS}
+          className="text-secondary p-[2rem] text-[3.5rem]"
+        >
           Our <span className="text-primary">Partners</span>
         </motion.h1>
       </motion.div>
 
-      <MotionUl
+
+      <motion.div
         ref={ref}
         initial="hidden"
-        variants={fadeInUP}
         animate={inView ? "show" : "hidden"}
-        className=" xs:timeline xs:timeline-middle text-slate-100 md:text-3xl lg:text-4xl text-lg sm:text-xl w-64 xs:text-lg xs:w-auto   font-semibold  mt-60 h-[600px]  xs:timeline-vertical "
-      >
-        <MotionLi variants={fadeInUP}>
-          <div className="timeline-start xs:bg-transparent xs:h-20    md:h-36 md:w-96 p-5 xs:timeline-box flex items-center mt-[-4rem]">
-            <Image
-              src="/token.png"
-              height={195}
-              width={195}
-              alt="company-logo"
-              className="w-12 sm:w-20 md:w-28"
-            />
-            BscScan
-          </div>
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}>
+      <motion.div
+      variants={FADE_DOWN_ANIMATION_VARIANTS} className=" w-screen md:w-[75%] flex gap-10 text-center md:m-auto items-center justify-center" >
+      <Marquee autoFill pauseOnHover pauseOnClick className="gap-10">
+        <div className="ml-[3rem]">
+          <Image src={"/partner1.png"} width={300} height={300} alt="BSC Scan" />
+        </div>
+        <div className="ml-[3rem]">
+          <Image src={"/partner2.png"} width={300} height={300} alt="BSC Scan" />
+        </div>
+        <div className="ml-[3rem]">
+          <Image src={"/partner3.png"} width={300} height={300} alt="BSC Scan" />
+        </div>
+        <div className="ml-[3rem]">
+          <Image src={"/partner4.png"} width={300} height={300} alt="BSC Scan" />
+        </div>
+        </Marquee>
 
-          <hr />
-        </MotionLi>
-        <MotionLi variants={fadeInUP}>
-          <hr />
-          <div className="timeline-end p-4 xs:bg-transparent xs:h-20  md:h-36 md:w-96 xs:timeline-box flex items-center">
-            <Image
-              src="/token.png"
-              height={95}
-              width={95}
-              alt="company-logo"
-              className="w-12 sm:w-20 md:w-28"
-            />
-            CuberScope
-          </div>
-          <hr />
-        </MotionLi>
-        <MotionLi variants={fadeInUP}>
-          <hr />
-          <div className="timeline-start p-5 xs:bg-transparent xs:h-20  md:h-36 md:w-96 xs:timeline-box flex items-center">
-            <Image
-              src="/token.png"
-              height={95}
-              width={95}
-              alt="company-logo"
-              className="w-12 sm:w-20 md:w-28"
-            />
-            TradingView
-          </div>
-          <hr />
-        </MotionLi>
-        <MotionLi variants={fadeInUP}>
-          <hr />
-          <div className="timeline-end p-5 xs:bg-transparent xs:h-20 md:h-36 md:w-96 xs:timeline-box flex items-center">
-            <Image
-              src="/token.png"
-              height={95}
-              width={95}
-              alt="company-logo"
-              className="w-12 sm:w-20 md:w-28"
-            />
-            BLOCKLIZ
-          </div>
-          <hr />
-        </MotionLi>
-      </MotionUl>
-    </div>
+      </motion.div>
+      </motion.div>
+    </>
+
+    // </div>
   );
 };
 

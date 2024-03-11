@@ -23,3 +23,28 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #c47816; 
   }
+
+  .animateBorder {
+    border: 3px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#000000, #000000) padding-box, linear-gradient(
+          var(--angle),
+          #000000,
+          #f89b1f
+        ) border-box;
+    animation: 8s rotate linear infinite;
+  }
+
+  
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
