@@ -23,6 +23,7 @@ const Form = () => {
     },
   };
   return (
+    <section id="Signup">
     <div className="hero min-h-[40em]  bg-black ">
       <div className="hero-content flex-col lg:flex-row-reverse  ">
         <motion.div
@@ -67,7 +68,7 @@ const Form = () => {
           </form>
         </div>
       </div>
-    </div>
+    </div></section>
   );
 };
 

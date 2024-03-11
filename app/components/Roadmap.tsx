@@ -81,7 +81,7 @@ export default function Roadmap() {
   ];
 
   return (
-    <>
+    <><section id="Roadmap">
       <motion.div 
       ref={ref}
       initial="hidden"
@@ -117,7 +117,7 @@ export default function Roadmap() {
             );
           })}
         </VerticalTimeline>
-      </section>
+      </section></section>
     </>
   );
 }

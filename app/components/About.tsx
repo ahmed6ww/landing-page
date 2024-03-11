@@ -13,7 +13,7 @@ export function About() {
   return (
 
     <>
-
+<section id="About">
     <motion.div
        ref={ref}
       initial="hidden"
@@ -27,7 +27,7 @@ export function About() {
           },
         },
       }}
-      className="mt-[8rem] p-5  text-white md:mt-[5em] text-2xl md:text-3xl text-left   
+      className="mt-[8rem] p-5  text-white  text-2xl md:text-3xl text-left   
       md:mr-[40%] md:ml-[15%] md:w-[25em]"
     >
       <motion.p variants={FADE_DOWN_ANIMATION_VARIANTS}>
@@ -48,7 +48,7 @@ export function About() {
         </span>
       </motion.p>
     </motion.div>
-
+</section>
    
      
     </>

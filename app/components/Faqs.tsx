@@ -10,7 +10,7 @@ const Accordion = () => {
     triggerOnce: true,
   });
   return (
-    <section className=" overflow-x-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
+    <section id="Faqs" className=" overflow-x-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
       <div className=" flex flex-col items-center justify-center">
         <motion.div
        ref={ref}

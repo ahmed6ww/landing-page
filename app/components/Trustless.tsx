@@ -83,6 +83,7 @@ export default function Trustless() {
     },
   ];
   return (
+    <section id="Trustless">
     <div className="max-w-4xl mx-auto h-full flex flex-col items-center ">
       {/* Text */}
       <motion.div
@@ -140,6 +141,6 @@ export default function Trustless() {
           </span>
         </div>
       </div> */}
-    </div>
+    </div></section>
   );
 }

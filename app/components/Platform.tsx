@@ -28,7 +28,7 @@ function Platform() {
   };
   return (
     <>
-      {" "}
+   <section id="Platform">
       <div className="min-h-screen mx-auto flex flex-col items-center ">
         <motion.div
           ref={ref}
@@ -118,17 +118,17 @@ function Platform() {
                   variants={fadeInUP}
                   className="flex flex-col md:flex-row gap-10  max-w-6xl mt-[6rem] p-4 md:even:flex-row-reverse md:even:text-start  items-center justify-center "
                 >
-                  <video
+                  <img
                     
-                    style={{ width: "300px", height: "250px",}}
-                    loop
-                    muted
-                    autoPlay
-                    playsInline
-                    controls={false}
-                  >
-                    <source src={cont.video} />
-                  </video>
+                    style={{ marginInline:"80px", width: "300px", height: "170px",}}
+                    
+                    
+                    
+                     src={cont.video} 
+                    
+                  />
+                    
+                  
                   <div className="flex flex-col w-80%] md:w-[40%] ">
                     <h3 className="text-[2rem] mt-2 font-bold text-primary">
                       {cont.label}
@@ -148,7 +148,7 @@ function Platform() {
           })}
         </motion.div>
       </div>
-    
+    </section>
     </>
   );
 }

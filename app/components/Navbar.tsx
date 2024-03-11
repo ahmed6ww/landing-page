@@ -1,10 +1,84 @@
-import Link from "next/link";
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import Link from "next/link";
+
+import { useState } from "react";
 const Navbar = () => {
+  const navlinks = {
+    mainnav: [
+      {
+        label: "Home",
+        href: "#/",
+      },
+      {
+        label: "About",
+        href: "#About",
+      },
+      {
+        label: "Platform Offering",
+        href: "#Platform",
+      },
+      {
+        label: "How it Works",
+        href: "#Trustless",
+      },
+      {
+        label: "Security",
+        href: "#Security",
+      },
+      {
+        label: "Roadmap",
+        href: "#Roadmap",
+      },
+      {
+        label: "FAQ's",
+        href: "#Faqs",
+      },
+    ],
+    socials: [
+      {
+        label: "Team",
+        href: "https://benefitmine.io/Team.html",
+      },
+      {
+        label: "View Whitepaper",
+        href: "https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1/",
+      },
+      {
+        label: "Twitter",
+        href: "https://twitter.com/benefitmine",
+      },
+      {
+        label: "Discord",
+        href: "https://discord.com/invite/BenefitMine",
+      },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/benefitmine_official/",
+      },
+      {
+        label: "Telegram",
+        href: "https://t.me/benefitmine_official",
+      },
+    ],
+  };
+
+  const scrollToSection = (id: string): void => {
+    const element = document.getElementById(id.substring(1));
+    const navbar = document.querySelector('.navbar') as HTMLElement | null;
+    if (element && navbar) {
+      const navbarHeight: number = navbar.offsetHeight;
+      const offsetTop: number = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <>
-      <div className="navbar bg-base-400 drop-shadaow p-5 text-secondary">
+      <div className="navbar  drop-shadaow p-5 text-secondary sticky top-0 z-[1000] bg-black">
         <div className="navbar-start bg-black">
           <div className="dropdown bg-black">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,116 +101,57 @@ const Navbar = () => {
               tabIndex={0}
               className=" bg-black menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
-              <li>
-                <a>Start</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>Platform Offering</a>
-              </li>
-              <li>
-                <a>How ir works</a>
-              </li>
-              <li>
-                <a>Security</a>
-              </li>
-              <li>
-                <a>Roadmap</a>
-              </li>
-              <li>
-                <a>FAQ's</a>
-              </li>
+              {navlinks.mainnav.map((link) => {
+                return (
+                  <li>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                );
+              })}
 
               <li>
                 <details>
-                  <summary>Other Links</summary>
+                  <summary>Socials</summary>
                   <ul className="p-2">
-                    <li>
-                      <a>Team</a>
-                    </li>
-                    <li>
-                      <a>View White Paper</a>
-                    </li>
-                    <li>
-                      <a>Twittter</a>
-                    </li>
-                    <li>
-                      <a>Discord</a>
-                    </li>
-                    <li>
-                      <a>Instagram</a>
-                    </li>
-                    <li>
-                      <a>Telegram</a>
-                    </li>
+                    {navlinks.socials.map((link) => {
+                      return (
+                        <li>
+                          <Link href={link.href} target="_blank">{link.label}</Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </details>
               </li>
-              {/* <li>
-                <a
-                  className="btn mt-4 border-primary bg-transparent text-primary hover:bg-secondary
-                hover:text-black"
-                >
-                  Sign Up
-                </a>
-              </li> */}
             </ul>
           </div>
           <div>
-            <img src="/logo.png" className="w-[170px] h-[25px] md:w-[170px] md:h-[25px]"  alt="Benefit Mine" />
+            <Image src="/logo.png" width={220} height={40} alt="Benefit Mine" />
           </div>
         </div>
         <div className="navbar-center  hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Start</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-            <li>
-              <a>Platform Offering</a>
-            </li>
-            <li>
-              <a>How it works</a>
-            </li>
-            <li>
-              <a>Security</a>
-            </li>
-            <li>
-              <a>Roadmap</a>
-            </li>
-            <li>
-              <a>FAQ's</a>
-            </li>
+            {navlinks.mainnav.map((link) => {
+              return (
+                <li>
+                  <a onClick={() => scrollToSection(link.href)}>{link.label}</a>
+                </li>
+              );
+            })}
 
             <li>
               <details className="">
-                <summary>Other Links</summary>
+                <summary>Socials</summary>
                 <ul className="p-2 bg-black ">
-                  <li>
-                    <a>Team</a>
-                  </li>
-                  <li>
-                    <a>View White Paper</a>
-                  </li>
-                  <li>
-                    <a>Twittter</a>
-                  </li>
-                  <li>
-                    <a>Discord</a>
-                  </li>
-                  <li>
-                    <a>Instagram</a>
-                  </li>
-                  <li>
-                    <a>Telegram</a>
-                  </li>
-                  <li>
-                    <a className="btn xl:hidden">Sign Up</a>
-                  </li>
+                  {navlinks.socials.map((link) => {
+                    return (
+                      <li>
+                        <Link href={link.href} target="_blank">
+                          {link.label}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </details>
             </li>

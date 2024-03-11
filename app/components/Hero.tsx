@@ -37,6 +37,7 @@ export default function Hero() {
   return (
 
     <>
+    <section id="/">
       <div className="min-h-screen min-w-screen text-white overflow-x-hidden">
         {/* text */}
         <div>
@@ -104,7 +105,7 @@ export default function Hero() {
   </div>
 
         </div>
-      </div>
+      </div></section>
     </>
   );
 }

@@ -13,6 +13,7 @@ function Security() {
 
       
   return (
+    <section id='Security'>
     <motion.div   ref={ref}
     initial="hidden"
     animate={inView ? "show" : "hidden"}
@@ -26,7 +27,7 @@ function Security() {
       },
     }} className="flex flex-col md:flex-row md:gap-10 gap-5 p-[3rem] items-center justify-center">
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
-      <img src="/111.png" alt="1" className='w-[20em] h-[20em]'/>
+      <img src="/cyberscope.gif" alt="1" className='h-[20rem] lg:h-[30rem]'/>
     </motion.div>
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="flex flex-col  gap-5 mb-32 md:mt-32">
       <h1 className=" md:text-[2.5rem] text-[1.7rem] font-medium text-secondary text-start">
@@ -40,7 +41,7 @@ function Security() {
         the safest projects coming to the market this year.
       </span>
     </motion.div>
-  </motion.div>
+  </motion.div></section>
   )
 }
 
