@@ -1,16 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
 export function About() {
-  const FADE_UP_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0, y: 10 },
-    show: { opacity: 1, y: 0, transition: { type: "spring" } },
-  };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
+
+    <>
+<section id="About">
     <motion.div
+       ref={ref}
       initial="hidden"
-      animate="show"
+      animate={inView ? "show" : "hidden"}
       viewport={{ once: true }}
       variants={{
         hidden: {},
@@ -20,9 +27,10 @@ export function About() {
           },
         },
       }}
-      className="mt-[8rem] p-5 m-5 text-white md:mt-[2em]  text-3xl text-left md:text-center "
+      className="mt-[8rem] p-5  text-white  text-2xl md:text-3xl text-left   
+      md:mr-[40%] md:ml-[15%] md:w-[25em]"
     >
-      <motion.p variants={FADE_UP_ANIMATION_VARIANTS}>
+      <motion.p variants={FADE_DOWN_ANIMATION_VARIANTS}>
         <span>
           At Benefit Mine, we{" "}
           <strong className="text-[#F89B1F]">constantly</strong> strive to
@@ -40,6 +48,11 @@ export function About() {
         </span>
       </motion.p>
     </motion.div>
+</section>
+   
+     
+    </>
+
   );
 }
 

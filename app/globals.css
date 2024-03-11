@@ -2,4 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Scoll Bar  */
+::-webkit-scrollbar {
+    width: 0.4em;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #000000; 
+    border-radius: 0;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f89b1f; 
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c47816; 
+  }
+
+  .animateBorder {
+    border: 3px solid #0000;
+    border-radius: 12px;
+    background: linear-gradient(#000000, #000000) padding-box, linear-gradient(
+          var(--angle),
+          #000000,
+          #f89b1f
+        ) border-box;
+    animation: 8s rotate linear infinite;
+  }
+
+  
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 

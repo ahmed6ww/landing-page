@@ -1,13 +1,35 @@
 "use client";
 import React, { useState } from "react";
+import { Variants, motion } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
 const Accordion = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
-    <section className=" overflow-x-hidden relative z-20 mt-40 bg-black  dark:bg-dark  ">
+    <section id="Faqs" className=" overflow-x-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
       <div className=" flex flex-col items-center justify-center">
-        <span className="mb-2 block text-[3rem] font-semibold text-primary">
-          FAQ ' S1
-        </span>
+        <motion.div
+       ref={ref}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }}>
+
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3.5rem] font-bold text-primary">
+          FAQ ' S
+        </motion.h1>
+        </motion.div>
 
         <div className=" mt-20  md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out ">
           <div className="">
@@ -110,7 +132,7 @@ const AccordionItem = ({ header, text }: any) => {
     setActive(!active);
   };
   return (
-    <div className="mb-8 md:w-[428px]  w-[300px] rounded-lg bg-[#161616] hover:bg-black p-3 hover:border-primary hover:border  hover:duration-1000 hover:ease-in  shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)]  ">
+    <div className="mb-8 md:w-[428px]  w-[300px] rounded-lg bg-[#161616] hover:bg-black p-3 hover:border-primary hover:border  hover:duration-1000 hover:ease-in   dark:bg-dark-2  ">
       <div className="flex flex-col items-center justify-center ">
         <button
           className={`faq-btn flex items-center w-full text-left `}
@@ -142,7 +164,7 @@ const AccordionItem = ({ header, text }: any) => {
             active ? "block" : "hidden"
           }`}
         >
-          <p className="py-3 text-[0.7rem] duration-1000 ease-in-out  leading-relaxed text-body-color dark:text-dark-6 ">
+          <p className="py-3 text-[0.7rem] duration-1000 ease-in-out text-gray-400 leading-relaxed text-body-color dark:text-dark-6 ">
             {text}
           </p>
         </div>

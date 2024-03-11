@@ -1,8 +1,16 @@
 "use client";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import TimelineElement from "@/app/components/ui/TimelineElement";
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
 export default function Roadmap() {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   type Phase = {
     title: string;
     points: string[];
@@ -73,12 +81,27 @@ export default function Roadmap() {
   ];
 
   return (
-    <>
-      <div className=" text-[3rem] font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 ">
-        <h1 className="text-white">
+    <><section id="Roadmap">
+      <motion.div 
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "show" : "hidden"}
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }}
+      className="  font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 ">
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-white text-[3.5rem] font-bold">
           Our <span className="text-[#F89B1F]">Roadmap</span>
-        </h1>
-      </div>
+        </motion.h1>
+      </motion.div>
+
+
       <section
         className="my-20 flex w-full scroll-mt-28 flex-col items-center justify-center gap-10"
         id="#experience"
@@ -94,7 +117,7 @@ export default function Roadmap() {
             );
           })}
         </VerticalTimeline>
-      </section>
+      </section></section>
     </>
   );
 }

@@ -2,6 +2,10 @@
 import Card from "@/app/components/Card";
 import { title } from "process";
 import { TypewriterEffectSmoothDemo } from "@/app/components/Heading";
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
+
 
 export default function Hero() {
   const cardProps1 = {
@@ -23,24 +27,71 @@ export default function Hero() {
     href: "https://benefitmine-organization.gitbook.io",
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+
+ 
+
   return (
+
     <>
+    <section id="/">
       <div className="min-h-screen min-w-screen text-white overflow-x-hidden">
         {/* text */}
         <div>
           {/* First heading */}
-          <div className="flex flex-col md:flex-row font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28">
-            <h1 className="text-[2rem] md:text-[3rem]">The Home of</h1>
-            <h2 className="text-[2.8rem] md:text-[3rem] text-[#f89b1f] ">
+          <motion.div
+      initial="hidden"
+      animate="show"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.15,
+          },
+        },
+      }} className="flex flex-col  font-bold md:gap-5 gap-0 md:min-w-[949px] text-center justify-center md:mt-32 mt-28 ">
+            {/* <h1 className="text-[2rem] md:text-[4rem]">The Home of</h1>
+            <h2 className="text-[2.8rem] md:text-[4rem] text-[#f89b1f] ">
               {" "}
               Benefit Mine
-            </h2>
+            </h2> */}
+            <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-secondary text-[2.5rem] mr-[1rem] ml-[1rem] md:text-[4rem]">The Home of <span className="text-[2.9rem] md:text-[4rem] text-[#f89b1f]">Benefit Mine</span></motion.h1>
+            <div>
+            <motion.p variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-[#f89b1f]  text-center text-sm md:text-2xl mt-4 md:mt-2">Your Business
+          <span className="text-secondary"> Our Responsibility</span></motion.p>
           </div>
+          <div>
+          <motion.button variants={FADE_DOWN_ANIMATION_VARIANTS}  className=" relative inline-flex mt-6 md:mt-4 h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)] " />
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-[1.5rem] py-[1rem] md:text-[1rem] text-[0.8rem]  text-white backdrop-blur-3xl font-semibold">
+              BUY $BFM
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="ml-[0.25rem] w-5 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </span>
+          </motion.button>
+          </div>
+          </motion.div>
           {/* Second Heading */}
           <div className="text-[0.9rem] mt-[-1rem]  flex font-bold text-center justify-center">
             {/* <h1 className="text-[#f89b1f]">Your Business</h1>
           <h2 className=" ">Our Responsibility</h2> */}
-            <TypewriterEffectSmoothDemo />
+            {/* <TypewriterEffectSmoothDemo /> */}
           </div>
         </div>
 
@@ -54,7 +105,7 @@ export default function Hero() {
   </div>
 
         </div>
-      </div>
+      </div></section>
     </>
   );
 }
