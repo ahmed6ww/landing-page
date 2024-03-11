@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss";
-
+import { nextui } from "@nextui-org/react";
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+
   ],
   theme: {
     extend: {
@@ -16,6 +18,7 @@ const config: Config = {
       colors: {
         primary: '#f89b1f',
         secondary: '#EBECF0',
+        black:"	#000000"
       },
       screens: {
         'fold':'280px',
@@ -31,6 +34,12 @@ const config: Config = {
       
     },
   },
-  plugins: [require("daisyui")],
+  darkMode: "class",
+  
+  plugins: [
+    require("daisyui"),
+    nextui()
+  ],
+  
 };
 export default config;

@@ -5,6 +5,7 @@ import { montserrat } from "@/lib/fonts"
 
 
 const inter = Inter({ subsets: ["latin"] });
+import {Providers} from "./providers";
 
 
 
@@ -21,8 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} bg-black overflow-x-hidden`}>
+        <Providers>
     
-        {children}</body>
+        {children}</Providers></body>
     </html>
   );
 }
