@@ -96,7 +96,7 @@ const Form = () => {
                   value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email ? (
-                  <div>{formik.errors.email}</div>
+                  <div className="mt-2 text-red-600">{formik.errors.email}</div>
                 ) : null}
               </div>
 
