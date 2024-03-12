@@ -1,7 +1,20 @@
+"use client"
 import Link from "next/link";
 import { FaDiscord, FaInstagram, FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
+  const scrollToSection = (id: string): void => {
+    const element = document.getElementById(id.substring(1));
+    const navbar = document.querySelector('.navbar') as HTMLElement | null;
+    if (element && navbar) {
+      const navbarHeight: number = navbar.offsetHeight;
+      const offsetTop: number = element.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <footer className="footer p-10  bg-black text-gray-500 border-t-[0.01px]   border-gray-900 ">
       <nav>
@@ -30,9 +43,9 @@ const Footer = () => {
       </nav>
       <nav>
         <h6 className="footer-title text-gray-200 text-[1rem]">Support</h6>
-        <Link href="/" className="link link-hover">
+        <a onClick={() => scrollToSection("#Faqs")} className="link link-hover">
           FAQ's
-        </Link>
+        </a>
       </nav>
       <nav>
         <h6 className="footer-title text-gray-200 text-[1rem]">About Us</h6>
