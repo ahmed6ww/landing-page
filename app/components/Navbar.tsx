@@ -104,7 +104,7 @@ const Navbar = () => {
               {navlinks.mainnav.map((link) => {
                 return (
                   <li>
-                    <Link href={link.href}>{link.label}</Link>
+                    <a onClick={() => scrollToSection(link.href)}>{link.label}</a>
                   </li>
                 );
               })}
