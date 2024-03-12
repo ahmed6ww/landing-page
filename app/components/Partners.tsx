@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { MotionUl, MotionLi } from "@/lib/motiondDiv";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation";
 import Marquee from "react-fast-marquee";
+
 
 const Partners = () => {
   const { ref, inView } = useInView({
@@ -69,16 +71,24 @@ const Partners = () => {
       variants={FADE_DOWN_ANIMATION_VARIANTS} className=" w-screen md:w-[75%] flex gap-10 text-center md:m-auto items-center justify-center" >
       <Marquee autoFill pauseOnHover pauseOnClick className="gap-10">
         <div className="ml-[3rem]">
+        <Link href="https://bscscan.com/" target="_blank">
           <Image src={"/partner1.png"} width={300} height={300} alt="BSC Scan" />
+        </Link>
         </div>
         <div className="ml-[3rem]">
+        <Link href="https://www.cyberscope.io/" target="_blank">
           <Image src={"/partner2.png"} width={300} height={300} alt="BSC Scan" />
+        </Link>
         </div>
         <div className="ml-[3rem]">
+        <Link href="https://www.tradingview.com/" target="_blank">
           <Image src={"/partner3.png"} width={300} height={300} alt="BSC Scan" />
+        </Link>
         </div>
         <div className="ml-[3rem]">
+        <Link href="https://www.blockliz.com/" target="_blank">
           <Image src={"/partner4.png"} width={300} height={300} alt="BSC Scan" />
+        </Link>
         </div>
         </Marquee>
 

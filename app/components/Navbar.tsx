@@ -8,10 +8,6 @@ const Navbar = () => {
   const navlinks = {
     mainnav: [
       {
-        label: "Home",
-        href: "#/",
-      },
-      {
         label: "About",
         href: "#About",
       },
@@ -20,7 +16,7 @@ const Navbar = () => {
         href: "#Platform",
       },
       {
-        label: "How it Works",
+        label: "Our Team",
         href: "#Trustless",
       },
       {
@@ -37,14 +33,6 @@ const Navbar = () => {
       },
     ],
     socials: [
-      {
-        label: "Team",
-        href: "https://benefitmine.io/Team.html",
-      },
-      {
-        label: "View Whitepaper",
-        href: "https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1/",
-      },
       {
         label: "Twitter",
         href: "https://twitter.com/benefitmine",
@@ -76,9 +64,11 @@ const Navbar = () => {
       });
     }
   };
+
+
   return (
     <>
-      <div className="navbar  drop-shadaow p-5 text-secondary sticky top-0 z-[1000] bg-black">
+      <div className="navbar drop-shadaow p-5 text-secondary sticky top-0 z-[1000] bg-black">
         <div className="navbar-start bg-black">
           <div className="dropdown bg-black">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -101,6 +91,11 @@ const Navbar = () => {
               tabIndex={0}
               className=" bg-black menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
+              <li>
+                        <Link href="https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1" target="_blank">
+                          Whitepaper
+                        </Link>
+                      </li>
               {navlinks.mainnav.map((link) => {
                 return (
                   <li>
@@ -125,12 +120,20 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="cursor-pointer">
+          <a onClick={() => scrollToSection("#/")}>
             <Image src="/logo.png" width={220} height={40} alt="Benefit Mine" />
+          </a>
+            
           </div>
         </div>
         <div className="navbar-center  hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
+          <li>
+                        <Link href="https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1" target="_blank">
+                          Whitepaper
+                        </Link>
+                      </li>
             {navlinks.mainnav.map((link) => {
               return (
                 <li>
@@ -158,7 +161,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-4">
+          <Link href="https://presale.benefitmine.io/" target="_blank">
           <button className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                          
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-3 py-1 text-[0.8rem] font-light text-white backdrop-blur-3xl">
               BUY $BFM
@@ -177,7 +182,9 @@ const Navbar = () => {
                 />
               </svg>
             </span>
+            
           </button>
+                        </Link>
           {/* <a className="btn ">Sign Up</a> */}
         </div>
       </div>

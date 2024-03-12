@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+
+import Link from "next/link";
 import { platfrom } from "../Data";
 import { openSans } from "@/lib/fonts"
 import { Variants, motion } from "framer-motion";
@@ -137,9 +138,11 @@ function Platform() {
                       {cont.content}
                     </p>
                     <div>
+                    <Link href={cont.href} target="_blank">
                       <button className="btn bg-black text-secondary border-primary mt-7 hover:text-black w-[14em] font-sans font-medium hover:bg-primary hover:border-[#f89b1f] rounded-full h-[32px] duration-500">
                         {cont.button}
                       </button>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>

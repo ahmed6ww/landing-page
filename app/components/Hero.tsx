@@ -5,6 +5,7 @@ import { TypewriterEffectSmoothDemo } from "@/app/components/Heading";
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
+import Link from "next/link";
 
 
 export default function Hero() {
@@ -65,7 +66,9 @@ export default function Hero() {
           <span className="text-secondary"> Our Responsibility</span></motion.p>
           </div>
           <div>
+          <Link href="https://presale.benefitmine.io/" target="_blank">
           <motion.button variants={FADE_DOWN_ANIMATION_VARIANTS}  className=" relative inline-flex mt-6 md:mt-4 h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                          
             <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)] " />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-[1.5rem] py-[1rem] md:text-[1rem] text-[0.8rem]  text-white backdrop-blur-3xl font-semibold">
               BUY $BFM
@@ -85,6 +88,7 @@ export default function Hero() {
               </svg>
             </span>
           </motion.button>
+            </Link>
           </div>
           </motion.div>
           {/* Second Heading */}
