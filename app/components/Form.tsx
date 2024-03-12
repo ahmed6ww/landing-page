@@ -44,10 +44,13 @@ const Form = () => {
     }),
     onSubmit: values => {
       // Do something with the form values, like submitting to a server
-      
+      formik.resetForm();
+ // Reset form and set the next `initialValues` of the form
+ 
 
       // Open the modal after the form is successfully submitted
       onOpen();
+      
     },
   });
 
@@ -83,7 +86,7 @@ const Form = () => {
                   <span className="label-text text-secondary">Email</span>
                 </label>
                 <input
-                  required
+                 
                   className="input input-bordered bg-black border-secondary focus:border-primary"
                   id="email"
                   name="email"
