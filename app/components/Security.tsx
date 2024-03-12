@@ -25,7 +25,7 @@ function Security() {
           staggerChildren: 0.15,
         },
       },
-    }} className="flex flex-col md:flex-row md:gap-10 gap-5 p-[3rem] items-center justify-center">
+    }} className="flex flex-col md:flex-row md:gap-10 gap-5 p-[3rem] items-center justify-center mt-[2rem]">
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
       <img src="/cyberscope.gif" alt="1" className='h-[14rem] md:h-[28rem]'/>
     </motion.div>

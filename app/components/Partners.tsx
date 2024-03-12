@@ -70,26 +70,26 @@ const Partners = () => {
       <motion.div
       variants={FADE_DOWN_ANIMATION_VARIANTS} className=" w-screen md:w-[75%] flex gap-10 text-center md:m-auto items-center justify-center" >
       <Marquee autoFill pauseOnHover pauseOnClick className="gap-10">
-        <div className="ml-[3rem]">
         <Link href="https://bscscan.com/" target="_blank">
+        <div className="ml-[3rem]">
           <Image src={"/partner1.png"} width={300} height={300} alt="BSC Scan" />
-        </Link>
         </div>
-        <div className="ml-[3rem]">
+        </Link>
         <Link href="https://www.cyberscope.io/" target="_blank">
+        <div className="ml-[3rem]">
           <Image src={"/partner2.png"} width={300} height={300} alt="BSC Scan" />
-        </Link>
         </div>
-        <div className="ml-[3rem]">
+        </Link>
         <Link href="https://www.tradingview.com/" target="_blank">
-          <Image src={"/partner3.png"} width={300} height={300} alt="BSC Scan" />
-        </Link>
-        </div>
         <div className="ml-[3rem]">
-        <Link href="https://www.blockliz.com/" target="_blank">
-          <Image src={"/partner4.png"} width={300} height={300} alt="BSC Scan" />
-        </Link>
+          <Image src={"/partner3.png"} width={300} height={300} alt="BSC Scan" />
         </div>
+        </Link>
+        <Link href="https://www.blockliz.com/" target="_blank">
+        <div className="ml-[3rem]">
+          <Image src={"/partner4.png"} width={300} height={300} alt="BSC Scan" />
+        </div>
+        </Link>
         </Marquee>
 
       </motion.div>
