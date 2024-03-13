@@ -3,8 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useState } from "react";
+import { useRef, useState,useEffect } from "react";
 const Navbar = () => {
+
+  
   const navlinks = {
     mainnav: [
       {
@@ -17,7 +19,7 @@ const Navbar = () => {
       },
       {
         label: "Our Team",
-        href: "#Trustless",
+        href: "#Team",
       },
       {
         label: "Security",
@@ -31,6 +33,10 @@ const Navbar = () => {
         label: "FAQ's",
         href: "#Faqs",
       },
+      {
+        lalel:"Whitepaper",
+        href:"https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1"
+      }
     ],
     socials: [
       {
@@ -49,6 +55,8 @@ const Navbar = () => {
         label: "Telegram",
         href: "https://t.me/benefitmine_official",
       },
+
+      
     ],
   };
 
@@ -64,15 +72,19 @@ const Navbar = () => {
       });
     }
   };
-
+  
 
   return (
     <>
-      <div className="navbar drop-shadaow p-5 text-secondary sticky top-0 z-[1000] bg-black">
-        <div className="navbar-start bg-black">
+      <div className="navbar drop-shadaow p-10 h-16  text-secondary sticky top-0 z-[1000] bg-black">
+        <div className="navbar-start  bg-black">
           <div className="dropdown bg-black">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
+            <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
+            
+
+
+                <svg 
+              
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 fill="none"
@@ -86,15 +98,15 @@ const Navbar = () => {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
+             
+              
             </div>
             <ul
               tabIndex={0}
               className=" bg-black menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
               <li>
-                        <Link href="https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1" target="_blank">
-                          Whitepaper
-                        </Link>
+                        
                       </li>
               {navlinks.mainnav.map((link) => {
                 return (
@@ -127,7 +139,7 @@ const Navbar = () => {
             
           </div>
         </div>
-        <div className="navbar-center  hidden lg:flex">
+        <div className="navbar-center  hidden xl:flex">
           <ul className="menu menu-horizontal px-1">
           <li>
                         <Link href="https://benefitmine-organization.gitbook.io/benefit-mine-whitepaper-vol-1" target="_blank">

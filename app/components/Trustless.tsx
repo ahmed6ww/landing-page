@@ -24,6 +24,9 @@ export default function Trustless() {
   };
 
   return (
+    <section id="Team">
+
+    
     <main>
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6 mb-4">
         <motion.div
@@ -478,6 +481,6 @@ export default function Trustless() {
           </div></div>
         </div>
       </div>
-    </main>
+    </main></section>
   );
 }

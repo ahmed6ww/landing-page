@@ -28,7 +28,7 @@ const Partners = () => {
   };
   return (
     // <div className=" max-w-full ">
-    <>
+    <><section id="">
       {" "}
       <motion.div
         ref={ref}
@@ -93,7 +93,7 @@ const Partners = () => {
         </Marquee>
 
       </motion.div>
-      </motion.div>
+      </motion.div></section>
     </>
 
     // </div>
