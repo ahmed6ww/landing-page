@@ -16,7 +16,7 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="footer p-10  bg-black text-gray-500 border-t-[0.01px]   border-gray-900 ">
+    <footer className="footer p-10  bg-black text-gray-400 border-t-[0.1px]   border-gray-900 ">
       <nav>
         <h6 className="footer-title text-gray-200 text-[1rem]">Follow Us</h6>
         <Link href="/" className="link link-hover">
