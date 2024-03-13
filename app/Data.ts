@@ -26,7 +26,7 @@ export const platfrom = [
         content:'Discover the inner workings of our project and delve into the details of our token economy. Gain insights into our distribution model, burning mechanisms, and allocation strategies. We need some pie chart that showing the tokenomics like this example and the pie chart and the circle over chart will moving, or some better idea.',
         button:'READ MORE'   ,
         video:'/vid4.gif' ,
-        href: "https://benefitmine.io/Tokenomics.html"
+        href: "/Tokenomics"
     },
     
 ]
