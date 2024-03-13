@@ -79,7 +79,7 @@ const Form = () => {
               HQ
             </motion.p>
           </motion.div>
-          <div className="card shrink-0 w-[15em] md:w-[25em]  flex  max-w-sm shadow-2xl border text-secondary border-primary">
+          <div className="card shrink-0 w-[15em] xs:w-[20em]  md:w-[25em]  flex  max-w-sm shadow-2xl border text-secondary border-primary">
             <form className="card-body" onSubmit={formik.handleSubmit}>
               <div className="form-control">
                 <label htmlFor="email" className="label">
