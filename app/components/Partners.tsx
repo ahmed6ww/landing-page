@@ -75,12 +75,12 @@ const Partners = () => {
           <Image src={"/partner1.png"} width={300} height={300} alt="BSC Scan" />
         </div>
         </Link>
-        <Link href="https://www.cyberscope.io/" target="_blank">
+        <Link href="https://www.tradingview.com/" target="_blank">
         <div className="ml-[3rem]">
           <Image src={"/partner2.png"} width={300} height={300} alt="BSC Scan" />
         </div>
         </Link>
-        <Link href="https://www.tradingview.com/" target="_blank">
+        <Link href="https://www.cyberscope.io/" target="_blank">
         <div className="ml-[3rem]">
           <Image src={"/partner3.png"} width={300} height={300} alt="BSC Scan" />
         </div>
