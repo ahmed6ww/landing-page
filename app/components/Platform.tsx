@@ -71,17 +71,18 @@ function Platform() {
                   variants={fadeInUP}
                   className="flex flex-col md:flex-row gap-10  max-w-6xl mt-[6rem] p-4 md:even:flex-row-reverse md:even:text-start  items-center justify-center "
                 >
-                  <Image
+                   <video
                     
-                    style={{ marginInline:"80px", width: "300px", height: "170px",}}
+                    style={{ width: "300px", height: "250px",}}
+                    loop
+                    muted
+                    autoPlay
+                    playsInline
+                    controls={false}
                     
-                    width={300}
-                    height={170}
-                    alt="videos"
-                    
-                     src={cont.video} 
-                    
-                  />
+                  >
+                    <source src={cont.video} />
+                  </video>
                     
                   
                   <div className="flex flex-col w-80%] md:w-[40%] ">

@@ -141,7 +141,7 @@ const Navbar = () => {
        
           
             {/* <button className="relative  md:flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" onClick={()=>scrollToSection("#Signup")}>
-              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)]" />
+              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)] rounded-full" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-3 py-1 text-[0.8rem] font-light text-white backdrop-blur-3xl">
               Sign Up
                 <svg
@@ -160,15 +160,29 @@ const Navbar = () => {
                 </svg>
               </span>
             </button> */}
+
+
+            
+     
+      
    
 
-   <a href="#Signup" className="inline-flex items-center justify-center h-12 px-7 py-0 text-[1rem] font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-[#633a02] border-solid rounded-full cursor-pointer select-none hover:text-white hover:border-primary focus:shadow-xs focus:no-underline">
-   Sign Up
+<a
+     href="https://presale.benefitmine.io/" target="_blank" className=" relative inline-flex items-center px-[1.5rem] md:px-[2rem]  py-[0.1rem] md:py-[0.4rem] overflow-hidden text-lg font-medium text-secondary border-2 border-primary rounded-full hover:text-black group hover:bg-black
+    ">
+<span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease
+ bg-gradient-to-br from-[#ff8a05] via-primary to-[#633a02] group-hover:from-[#ffddad] group-hover:via-primary group-hover:to-[#8a5102] 
+"></span>
+<span className="absolute right-0 flex items-center justify-start w-5 md:w-7 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease
+">
+<svg className="w-4 md:w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+</span>
+<span className="relative font-bold text-[0.7rem] md:text-[0.9rem]  ">BUY $BFM</span>
 </a>
 
 
           
-          {/* <a className="btn ">Sign Up</a> */}
+      
         </div>
       </div>
     </>
