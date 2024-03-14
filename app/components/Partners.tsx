@@ -87,7 +87,7 @@ const Partners = () => {
         </Link>
         <Link href="https://www.blockliz.com/" target="_blank">
         <div className="ml-[3rem]">
-          <Image src={"/partner4.png"} width={300} height={300} alt="BSC Scan" />
+          <Image src={"/partner4.svg"} width={300} height={300} alt="BSC Scan" />
         </div>
         </Link>
         </Marquee>
