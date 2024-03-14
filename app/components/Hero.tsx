@@ -103,27 +103,14 @@ export default function Hero() {
                     </span>
                   </motion.button>
                 </Link> */}
-    <motion.a
-                    variants={FADE_DOWN_ANIMATION_VARIANTS} href="https://presale.benefitmine.io/" target="_blank" className="md:mt-5 mt-9 relative inline-flex items-center px-11 py-3 overflow-hidden text-lg font-medium text-secondary border-2 border-primary rounded-full hover:text-black group hover:bg-black
-    ">
-<span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease
- bg-gradient-to-br from-[#ff8a05] via-primary to-[#633a02] group-hover:from-[#ffddad] group-hover:via-primary group-hover:to-[#8a5102] 
-"></span>
-<span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease
 
-">
-<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-</span>
-<span className="relative font-medium">BUY $BFM</span>
+<motion.a
+                    variants={FADE_DOWN_ANIMATION_VARIANTS}  href="#Signup" className="mt-4 relative inline-flex items-center justify-start px-8 py-3 overflow-hidden font-bold rounded-full group">
+<span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+<span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-primary opacity-100 group-hover:-translate-x-8"></span>
+<span className="relative w-full text-left text-secondary transition-colors duration-200 ease-in-out group-hover:text-gray-900">Sign Up</span>
+<span className="absolute inset-0 border-2 border-primary rounded-full"></span>
 </motion.a>
-
-
-
-
-
-
-
-
 
 
 

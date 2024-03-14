@@ -182,7 +182,7 @@ const Navbar = () => {
 
 
           
-          {/* <a className="btn ">Sign Up</a> */}
+      
         </div>
       </div>
     </>
