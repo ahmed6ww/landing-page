@@ -27,11 +27,7 @@ export default function Trustless() {
     <section id="Team">
 
     
-    <main>
-      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6 mb-4">
-        <motion.div
-          className="mx-auto mb-8 max-w-screen-sm lg:mb-16 font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 "
-          ref={ref}
+    <motion.div   ref={ref}
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           viewport={{ once: true }}
@@ -42,7 +38,11 @@ export default function Trustless() {
                 staggerChildren: 0.15,
               },
             },
-          }}
+          }}>
+      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6 mb-4">
+        <div
+          className="mx-auto mb-8 max-w-screen-sm lg:mb-16 font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 "
+        
         >
           <motion.h1
             variants={FADE_DOWN_ANIMATION_VARIANTS}
@@ -50,20 +50,22 @@ export default function Trustless() {
           >
             Our <span className="text-[#F89B1F]">Team</span>
           </motion.h1>
-        </motion.div>
-        <div className="flex flex-col items-center justify-center mt-36 gap-10 ">
+        </div>
+        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}  className="flex flex-col items-center justify-center mt-36 gap-10 ">
+
+
           <div className="flex md:flex-row flex-col gap-10 md:gap-20">
             <div className="text-center text-secondary">
               <img
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                src={"/team1.jpg"}
                 alt="Bonnie Av/atar"
               />
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-primary">
-                <a href="#">Bonnie Green</a>
+                <a href="#">Jason Alan Goldberg</a>
               </h3>
-              <p>CEO/Co-founder</p>
-              <ul className="flex justify-center mt-4 space-x-4">
+              <p>CEO</p>
+              {/* <ul className="flex justify-center mt-4 space-x-4">
                 <li>
                   <a
                     href="#"
@@ -136,19 +138,19 @@ export default function Trustless() {
                     </svg>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="text-center text-secondary">
               <img
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
+                src={"/team2.jpg"}
                 alt="Helene A/vatar"
               />
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-primary">
-                <a href="#">Helene Engels</a>
+                <a href="#">Helen Tek</a>
               </h3>
-              <p>CTO/Co-founder</p>
-              <ul className="flex justify-center mt-4 space-x-4">
+              <p>CIO</p>
+              {/* <ul className="flex justify-center mt-4 space-x-4">
                 <li>
                   <a
                     href="#"
@@ -221,19 +223,19 @@ export default function Trustless() {
                     </svg>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="text-center text-secondary">
               <img
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                src={"/team3.jpg"}
                 alt="Jese Avatar"
               />
               <h3 className="mb-1 text-2xl font-bold tracking-tight text-primary">
-                <a href="#">Jese Leos</a>
+                <a href="#">Wex Lathar</a>
               </h3>
-              <p>SEO & Marketing</p>
-              <ul className="flex justify-center mt-4 space-x-4">
+              <p>CMO</p>
+              {/* <ul className="flex justify-center mt-4 space-x-4">
                 <li>
                   <a
                     href="#"
@@ -306,20 +308,23 @@ export default function Trustless() {
                     </svg>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-10 md:gap-20"><div className="text-center text-secondary">
+
+
+          <div
+            className="flex flex-col md:flex-row gap-10 md:gap-20"><div className="text-center text-secondary">
             <img
               className="mx-auto mb-4 w-36 h-36 rounded-full"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+              src={"/team4.jpg"}
               alt="Joseph A/vatar"
             />
             <h3 className="mb-1 text-2xl font-bold tracking-tight text-primary">
               <a href="#">Joseph Mcfall</a>
             </h3>
-            <p>Sales</p>
-            <ul className="flex justify-center mt-4 space-x-4">
+            <p>CTO</p>
+            {/* <ul className="flex justify-center mt-4 space-x-4">
               <li>
                 <a
                   href="#"
@@ -392,8 +397,10 @@ export default function Trustless() {
                   </svg>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
+
+
           <div className="text-center text-secondary">
             <img
               className="mx-auto mb-4 w-36 h-36 rounded-full"
@@ -404,7 +411,7 @@ export default function Trustless() {
               <a href="#">Lana Byrd</a>
             </h3>
             <p>Web Designer</p>
-            <ul className="flex justify-center mt-4 space-x-4">
+            {/* <ul className="flex justify-center mt-4 space-x-4">
               <li>
                 <a
                   href="#"
@@ -477,10 +484,11 @@ export default function Trustless() {
                   </svg>
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div></div>
-        </div>
+        </motion.div>
       </div>
-    </main></section>
+    </motion.div>
+    </section>
   );
 }
