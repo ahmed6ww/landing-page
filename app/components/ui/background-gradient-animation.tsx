@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(0, 0, 0)",
   gradientBackgroundEnd = "rgb(0, 0, 0)",
-  firstColor = "252, 220, 92", // Yellow color
-  secondColor = "252, 220, 92", // Yellow color 248, 155, 31.
-  thirdColor = "252, 220, 92", // Yellow color
+  firstColor = "248, 155, 28", // Yellow color
+  secondColor = "44, 196, 245", // Yellow color 248, 155, 31.
+  thirdColor = "255, 255, 255", // Yellow color
   fourthColor = "252, 220, 92", // Yellow color
   fifthColor = "252, 220, 92", // Yellow color
   pointerColor = "140, 100, 255",
@@ -89,7 +89,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        " h-[100rem]  lg:h-[80rem] xl:h-[70rem] relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        " h-[10rem]  lg:h-[20rem] xl:h-[40rem] relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >

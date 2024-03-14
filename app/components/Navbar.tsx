@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar drop-shadaow p-10 h-16  text-secondary sticky top-0 z-[1000] bg-black">
+      <div className="navbar drop-shadaow md:p-10 p-2 h-16  text-secondary sticky top-0 z-[1000] bg-black">
         <div className="navbar-start  bg-black">
           <div className="dropdown bg-black">
             <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
@@ -113,6 +113,7 @@ const Navbar = () => {
                 width={220}
                 height={40}
                 alt="Benefit Mine"
+
               />
             </a>
           </div>
@@ -137,14 +138,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-4">
-        <Button onClick={()=>scrollToSection("#Signup")} className="text-black" color="primary" variant="solid">
-        Sign Up
-      </Button>  
+       
           
-            <button className="relative hidden md:flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" onClick={()=>scrollToSection("#Signup")}>
+            {/* <button className="relative  md:flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" onClick={()=>scrollToSection("#Signup")}>
               <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-3 py-1 text-[0.8rem] font-light text-white backdrop-blur-3xl">
-                BUY $BFM
+              Sign Up
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -160,7 +159,14 @@ const Navbar = () => {
                   />
                 </svg>
               </span>
-            </button>
+            </button> */}
+   
+
+   <a href="#Signup" className="inline-flex items-center justify-center h-12 px-7 py-0 text-[1rem] font-semibold text-center text-gray-200 no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border-2 border-[#633a02] border-solid rounded-full cursor-pointer select-none hover:text-white hover:border-primary focus:shadow-xs focus:no-underline">
+   Sign Up
+</a>
+
+
           
           {/* <a className="btn ">Sign Up</a> */}
         </div>

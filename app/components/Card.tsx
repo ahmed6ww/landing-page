@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { openSans } from "@/lib/fonts"
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation";
+import Link from "next/link";
 
 export default function Card({ one }: any) {
 
@@ -26,6 +27,7 @@ export default function Card({ one }: any) {
       },
     }} className=" flex items-center rounded-xl justify-center p-8">
       <PinContainer title={one.href} href={one.href}>
+      <Link href={one.href} target="_blank">
         <motion.div
          variants={FADE_DOWN_ANIMATION_VARIANTS}
         className="card w-[16em] h-[17em] sm:w-[20em] sm:h-[19em] rounded-xl shadow-xl border border-primary ">
@@ -41,6 +43,7 @@ export default function Card({ one }: any) {
             </div>
           </motion.div>
         </motion.div>
+        </Link>
       </PinContainer>
     </motion.div>
   );

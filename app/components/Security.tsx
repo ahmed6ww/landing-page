@@ -4,6 +4,7 @@ import { Variants, motion } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation";
+import Image from 'next/image'
 
 function Security() {
 
@@ -27,7 +28,7 @@ function Security() {
       },
     }} className="flex flex-col md:flex-row md:gap-10 gap-5 p-[3rem] items-center justify-center mt-[2rem]">
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
-      <img src="/cyberscope.gif" alt="1" className='h-[14rem] md:h-[28rem]'/>
+      <Image src={"/cyberscope.gif"} width={400} height={150} alt={"1"} className='h-[14rem] md:h-[25rem]'/>
     </motion.div>
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="flex flex-col  gap-5 mb-32 md:mt-32">
       <h1 className=" md:text-[2.5rem] text-[2rem] font-medium text-secondary text-start">

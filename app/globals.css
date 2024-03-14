@@ -49,3 +49,23 @@
   inherits: false;
 }
 
+.animate-first {
+  animation: moveVertical 50s ease infinite;
+}
+
+.animate-second {
+  animation: moveInCircle 50s reverse infinite;
+}
+
+.animate-third {
+  animation: moveInCircle 50s linear infinite;
+}
+
+.animate-fourth {
+  animation: moveHorizontal 50s ease infinite;
+}
+
+.animate-fifth {
+  animation: moveInCircle 50s ease infinite;
+}
+

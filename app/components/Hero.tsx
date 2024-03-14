@@ -3,7 +3,6 @@ import { BackgroundGradientAnimation } from "./ui/background-gradient-animation"
 
 import Card from "@/app/components/Card";
 import { title } from "process";
-import { TypewriterEffectSmoothDemo } from "@/app/components/Heading";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation";
@@ -35,8 +34,8 @@ export default function Hero() {
 
   return (
     <>
-      <section id="/">
-      <BackgroundGradientAnimation className="h-[10rem]">
+      <section id="/" className="z-2">
+      {/* <BackgroundGradientAnimation className="h-[10rem]"> */}
         <div className="min-h-screen min-w-screen text-white overflow-x-hidden z-10">
           {/* text */}
           <div>
@@ -79,7 +78,7 @@ export default function Hero() {
                 </motion.p>
               </div>
               <div>
-                <Link href="https://presale.benefitmine.io/" target="_blank">
+                {/* <Link href="https://presale.benefitmine.io/" target="_blank">
                   <motion.button
                     variants={FADE_DOWN_ANIMATION_VARIANTS}
                     className=" relative inline-flex mt-6 md:mt-4 h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
@@ -103,7 +102,33 @@ export default function Hero() {
                       </svg>
                     </span>
                   </motion.button>
-                </Link>
+                </Link> */}
+    <motion.a
+                    variants={FADE_DOWN_ANIMATION_VARIANTS} href="https://presale.benefitmine.io/" target="_blank" className="md:mt-5 mt-9 relative inline-flex items-center px-11 py-3 overflow-hidden text-lg font-medium text-secondary border-2 border-primary rounded-full hover:text-black group hover:bg-black
+    ">
+<span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease
+ bg-gradient-to-br from-[#ff8a05] via-primary to-[#633a02] group-hover:from-[#ffddad] group-hover:via-primary group-hover:to-[#8a5102] 
+"></span>
+<span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease
+
+">
+<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+</span>
+<span className="relative font-medium">BUY $BFM</span>
+</motion.a>
+
+
+
+
+
+
+
+
+
+
+
+
+
               </div>
             </motion.div>
             {/* Second Heading */}
@@ -123,7 +148,8 @@ export default function Hero() {
               <Card one={cardProps3} />
             </div>
           </div>
-        </div></BackgroundGradientAnimation>
+        </div>
+        {/* </BackgroundGradientAnimation> */}
       </section>
     </>
   );

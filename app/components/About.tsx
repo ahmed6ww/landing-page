@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
+
 export function About() {
 
   const { ref, inView } = useInView({
@@ -13,7 +14,9 @@ export function About() {
   return (
 
     <>
+
 <section id="About">
+     
     <motion.div
        ref={ref}
       initial="hidden"
@@ -48,6 +51,7 @@ export function About() {
         </span>
       </motion.p>
     </motion.div>
+ 
 </section>
    
      
