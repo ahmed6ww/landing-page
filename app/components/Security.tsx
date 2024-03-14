@@ -30,10 +30,10 @@ function Security() {
       <img src="/cyberscope.gif" alt="1" className='h-[14rem] md:h-[28rem]'/>
     </motion.div>
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="flex flex-col  gap-5 mb-32 md:mt-32">
-      <h1 className=" md:text-[2.5rem] text-[1.8rem] font-medium text-secondary text-start">
+      <h1 className=" md:text-[2.5rem] text-[2rem] font-medium text-secondary text-start">
         Your assets, <strong className="text-[#F89B1F]">secured</strong>
       </h1>
-      <span className="text-start text-secondary text-[0.8rem] md:text-[1.1rem]  max-w-[260px] md:max-w-[700px]">
+      <span className="text-start text-secondary text-[1rem] md:text-[1.1rem]  max-w-[260px] md:max-w-[700px]">
         Audited by the world's leading security firm,
         <strong className="text-[#F89B1F]"> Cyberscope</strong>, we're
         pleased to say that our score of
