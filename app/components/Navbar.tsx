@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar drop-shadaow md:p-10 p-2 h-16  text-secondary sticky top-0 z-[1000] bg-black">
+      <div className="navbar drop-shadaow md:p-5 p-2 h-[1rem]  text-secondary sticky top-0 z-[1000] bg-black">
         <div className="navbar-start  bg-black">
           <div className="dropdown bg-black">
             <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">

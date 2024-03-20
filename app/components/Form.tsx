@@ -11,8 +11,8 @@ import {
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { useFormik } from "formik";
+import * as Yup from "yup";
 const Form = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -37,27 +37,43 @@ const Form = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: '',
+      email: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string().email('Invalid email address').required('Required'),
+      email: Yup.string().email("Invalid email address").required("Required"),
     }),
-    onSubmit: values => {
+    onSubmit: (values) => {
       // Do something with the form values, like submitting to a server
       formik.resetForm();
- // Reset form and set the next `initialValues` of the form
- 
+      // Reset form and set the next `initialValues` of the form
 
       // Open the modal after the form is successfully submitted
       onOpen();
-      
     },
   });
 
   return (
     <section id="Signup">
       <div className="hero min-h-[40em]  bg-black ">
-        <div className="hero-content flex-col lg:flex-row-reverse  ">
+
+
+        <div className="  flex justify-center z-0 absolute min-h-screen w-[90%]  left-[-2rem] md:left-0">
+          <div className="bg-[#f89b1c]  green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
+        </div>
+
+        <div className="  flex justify-center z-0 absolute min-h-screen w-[30%]   ml-[-75rem]">
+          <div className=" bg-[#2cc4f5] green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
+        </div>
+        <div className="  flex justify-center z-0 absolute min-h-screen w-[90%]  left-[-2rem] md:left-[-20rem]">
+          <div className="bg-[#2cc4f5] green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
+        </div>
+
+        <div className="  flex justify-center z-0 absolute min-h-screen w-[30%]   ml-[-40rem]">
+          <div className=" bg-[#f89b1c]  green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
+        </div>
+
+
+        <div className="hero-content flex-col lg:flex-row-reverse z-110 ">
           <motion.div
             ref={ref}
             initial="hidden"
@@ -86,7 +102,6 @@ const Form = () => {
                   <span className="label-text text-secondary">Email</span>
                 </label>
                 <input
-                 
                   className="input input-bordered bg-black border-secondary focus:border-primary"
                   id="email"
                   name="email"
@@ -151,7 +166,5 @@ const Form = () => {
     </section>
   );
 };
-
-
 
 export default Form;

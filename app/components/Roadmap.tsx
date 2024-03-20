@@ -95,7 +95,7 @@ export default function Roadmap() {
           },
         },
       }}
-      className="  font-bold md:gap-5 gap-0 text-center justify-center md:mt-32 mt-28 ">
+      className="  font-bold md:gap-5 gap-0 text-center justify-center md:mt-28 mt-0 ">
         <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS} className="text-white text-[3.5rem] font-bold">
           Our <span className="text-[#F89B1F]">Roadmap</span>
         </motion.h1>

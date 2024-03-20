@@ -34,8 +34,8 @@ export default function Hero() {
 
   return (
     <>
-      <section id="/" className="z-2">
-      {/* <BackgroundGradientAnimation className="h-[10rem]"> */}
+      <section id="/">
+        {/* <BackgroundGradientAnimation className="h-[10rem]"> */}
         <div className="min-h-screen min-w-screen text-white overflow-x-hidden z-10">
           {/* text */}
           <div>
@@ -54,24 +54,43 @@ export default function Hero() {
               }}
               className="flex flex-col  font-bold md:gap-5 gap-0  text-center justify-center md:mt-32 mt-28 "
             >
-              {/* <h1 className="text-[2rem] md:text-[4rem]">The Home of</h1>
-            <h2 className="text-[2.8rem] md:text-[4rem] text-[#f89b1f] ">
-              {" "}
-              Benefit Mine
-            </h2> */}
-              <motion.h1
+             
+              <motion.div
                 variants={FADE_DOWN_ANIMATION_VARIANTS}
-                className="text-secondary text-[2.5rem] mr-[1rem] ml-[1rem] md:text-[4rem]"
+                className="  flex justify-center z-0 absolute min-h-screen w-[90%] top-[3rem] md:top-0 left-[-2rem] md:left-0"
               >
-                The Home of{" "}
-                <span className="text-[2.9rem] md:text-[4rem] text-[#f89b1f]">
-                  Benefit Mine
-                </span>
-              </motion.h1>
-              <div>
+                
+                <div className="bg-[#2cc4f5]  green blur-[140px] md:blur-[140px] lg:blur-[140px] rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
+
+              </motion.div>
+
+              <motion.div
+                variants={FADE_DOWN_ANIMATION_VARIANTS}
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[16rem] md:top-0  ml-[0rem]"
+              >
+               
+                <div className=" bg-[#f89b1c] green blur-[140px] md:blur-[140px] lg:blur-[140px] rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
+
+              </motion.div>
+
+
+
+
+              <div className="z-10">
+                <motion.h1
+                  variants={FADE_DOWN_ANIMATION_VARIANTS}
+                  className="text-secondary text-[2.5rem] mr-[1rem] ml-[1rem] md:text-[4rem] z-10"
+                >
+                  The Home of{" "}
+                  <span className="text-[2.9rem] md:text-[4rem] text-[#f89b1f] ">
+                    Benefit Mine
+                  </span>
+                </motion.h1>
+              </div>
+              <div className="z-10">
                 <motion.p
                   variants={FADE_DOWN_ANIMATION_VARIANTS}
-                  className="text-[#f89b1f]  text-center text-sm md:text-2xl mt-4 md:mt-2"
+                  className="text-[#f89b1f]  text-center text-sm md:text-2xl mt-4 md:mt-2 "
                 >
                   Your Business
                   <span className="text-secondary"> Our Responsibility</span>
@@ -104,18 +123,18 @@ export default function Hero() {
                   </motion.button>
                 </Link> */}
 
-<motion.a
-                    variants={FADE_DOWN_ANIMATION_VARIANTS}  href="#Signup" className="mt-8 md:mt-4 relative inline-flex items-center justify-start px-8 py-3 overflow-hidden font-bold rounded-full group">
-<span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-<span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-primary opacity-100 group-hover:-translate-x-8"></span>
-<span className="relative w-full text-left text-secondary transition-colors duration-200 ease-in-out group-hover:text-gray-900">Sign Up</span>
-<span className="absolute inset-0 border-2 border-primary rounded-full"></span>
-</motion.a>
-
-
-
-
-
+                <motion.a
+                  variants={FADE_DOWN_ANIMATION_VARIANTS}
+                  href="#Signup"
+                  className="mt-8 md:mt-4 relative inline-flex items-center justify-start px-8 py-3 overflow-hidden font-bold rounded-full group"
+                >
+                  <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
+                  <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-primary opacity-100 group-hover:-translate-x-8"></span>
+                  <span className="relative w-full text-left text-secondary transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+                    Sign Up
+                  </span>
+                  <span className="absolute inset-0 border-2 border-primary rounded-full"></span>
+                </motion.a>
               </div>
             </motion.div>
             {/* Second Heading */}

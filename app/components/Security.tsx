@@ -26,7 +26,7 @@ function Security() {
           staggerChildren: 0.15,
         },
       },
-    }} className="flex flex-col md:flex-row md:gap-10 gap-5 p-[3rem] items-center justify-center mt-[2rem]">
+    }} className="flex flex-col md:flex-row md:gap-10 gap-6 p-[3rem] items-center justify-center mt-[2rem]">
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className=" border-b-2 border-gray-900 backdrop:shadow-xl ">
     <video
                     
@@ -36,17 +36,17 @@ function Security() {
                     autoPlay
                     playsInline
                     controls={false}
-                    className='w-[50em] h-[50em]'
+                    className='w-[25em] h-[25em]'
                     
                   >
                     <source src={"/cyberscope.mp4"} />
                   </video>
     </motion.div>
     <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="flex flex-col  gap-5 mb-32 md:mt-32">
-      <h1 className=" md:text-[2.5rem] text-[2rem] font-medium text-secondary text-start">
+      <h1 className=" md:text-[2.6rem] text-[2rem] font-medium text-secondary text-start">
         Your assets, <strong className="text-[#F89B1F]">secured</strong>
       </h1>
-      <span className="text-start text-secondary text-[1rem] md:text-[1.1rem]  max-w-[260px] md:max-w-[700px]">
+      <span className="text-start text-secondary text-[1rem] md:text-[1.2rem]  max-w-[260px] md:max-w-[700px]">
         Audited by the world's leading security firm,
         <strong className="text-[#F89B1F]"> Cyberscope</strong>, we're
         pleased to say that our score of
