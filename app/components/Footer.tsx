@@ -139,7 +139,7 @@ const Footer = () => {
         <p>
           DESIGN & DEVELOPMENT:{" "}
           <span className="text-primary">
-            <Link href="/">BLOCKLIZ</Link> / <Link href="/">ADVANCED TEAM</Link>{" "}
+            <Link href="https://blockliz.com" target="_blank">BLOCKLIZ</Link>{" "}
           </span>{" "}
           <br />© BENEFIT MINE 2024. ALL RIGHTS RESERVED.
         </p>
