@@ -47,9 +47,9 @@ const Partners = () => {
       >
         <motion.h1
           variants={FADE_DOWN_ANIMATION_VARIANTS}
-          className="text-secondary p-[2rem] text-[3.5rem]"
+          className="text-secondary p-[2rem] text-[3.5rem] relative z-10"
         >
-          Our <span className="text-primary">Partners</span>
+          Our <span className="text-primary relative z-10">Partners</span>
         </motion.h1>
       </motion.div>
 

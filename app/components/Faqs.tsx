@@ -10,9 +10,8 @@ const Accordion = () => {
     triggerOnce: true,
   });
   return (
-    <section id="Faqs" className=" overflow-x-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
-      <div className=" flex flex-col items-center justify-center">
-        <motion.div
+    <section id="Faqs" className=" overflow-x-hidden overflow-y-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
+      <motion.div
        ref={ref}
       initial="hidden"
       animate={inView ? "show" : "hidden"}
@@ -24,15 +23,38 @@ const Accordion = () => {
             staggerChildren: 0.15,
           },
         },
-      }}>
+      }} className=" flex flex-col items-center justify-center">
+        <div>
 
-        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3.5rem] font-bold text-primary">
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3.5rem] font-bold text-primary relative z-10">
           FAQ ' S
         </motion.h1>
-        </motion.div>
+        </div>
 
-        <div className=" mt-20  md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out ">
+        
+
+
+        
+
+        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}  className=" mt-20  md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out relative z-20">
           <div className="">
+          <div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[120%] top-[24rem] md:top-[0rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#f89b1c]    green blur-[150px] md:blur-[150px] rounded-full absolute h-[12em] w-[12em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+              <div
+              
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[-4rem]  md:top-[-14rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#2cc4f5]  green blur-[150px] md:blur-[150px]   rounded-full absolute h-[12em] w-[12em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
             <AccordionItem
               header="What is Benefit Mine?"
               text="Benefit Mine is a leading cryptocurrency exchange platform that offers secure, transparent, and reliable services for trading various types of cryptocurrencies. Our platform aims to provide a user-friendly environment for both beginner and experienced traders to buy, sell, and trade digital assets."
@@ -86,8 +108,8 @@ const Accordion = () => {
               While Benefit Mine is accessible globally, there might be restrictions in certain jurisdictions due to local regulations. Please check our Terms and Conditions for the list of supported countries."
             />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* <div className="absolute md:top-40 z-[-2] md:left-0 bottom-0">
         <svg
@@ -132,7 +154,7 @@ const AccordionItem = ({ header, text }: any) => {
     setActive(!active);
   };
   return (
-    <div className="mb-8 md:w-[428px]  w-[300px] rounded-lg bg-[#161616] hover:bg-black p-3 hover:border-primary hover:border  hover:duration-1000 hover:ease-in   dark:bg-dark-2  ">
+    <div className="mb-8 md:w-[428px]  w-[300px] rounded-lg bg-[#161616] hover:bg-black p-3 hover:border-primary hover:border  hover:duration-1000 hover:ease-in   dark:bg-dark-2 relative z-10">
       <div className="flex flex-col items-center justify-center ">
         <button
           className={`faq-btn flex items-center w-full text-left `}
@@ -153,7 +175,7 @@ const AccordionItem = ({ header, text }: any) => {
           </div>
 
           <div className=" text-secondary">
-            <h4 className="mt-1 text-[0.8rem] font-semibold text-dark dark:text-white max-w-[600px]  ">
+            <h4 className="mt-1 text-[0.9rem] font-semibold text-dark dark:text-white max-w-[600px]  ">
               {header}
             </h4>
           </div>
@@ -164,7 +186,7 @@ const AccordionItem = ({ header, text }: any) => {
             active ? "block" : "hidden"
           }`}
         >
-          <p className="py-3 text-[0.7rem] duration-1000 ease-in-out text-gray-400 leading-relaxed text-body-color dark:text-dark-6 ">
+          <p className="py-3 text-[0.8rem] duration-1000 ease-in-out text-gray-400 leading-relaxed text-body-color dark:text-dark-6 ">
             {text}
           </p>
         </div>
