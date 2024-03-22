@@ -29,7 +29,7 @@ export default function Roadmap() {
       title: "PHASE 2 (Completed)",
       points: [
         "Develop a detailed project plan and allocate resources.",
-        "Begin the development of the BFM Payment Gateway",
+        "Begin the development of the BFM Payment Gateway.",
         "Begin the development of Centralized Exchange (CEX) V1 with peer-to-peer, Spot, and over-the-counter trading functionalities.",
       ],
     },
@@ -38,17 +38,17 @@ export default function Roadmap() {
       points: [
         "Test and optimize the platform's performance, including speed, scalability, and uptime.",
         "Launch new BFM token website.",
-        "Launch CEX V1 and unveil CEX demo version (trade on live price with non-real assets)",
-        "Develop CEX share profit section",
+        "Launch CEX V1 and unveil CEX demo version (trade on live price with non-real assets).",
+        "Develop CEX share profit section.",
       ],
     },
     {
       title: "PHASE 4 (Completed)",
       points: [
         "Conduct a 1,000,000 BFM token airdrop to the private Telegram community.",
-        "Launch a private sale of tokens of the core community and supporters",
+        "Launch a private sale of tokens of the core community and supporters.",
         "Freeze 50% of the tokens for two years to create scarcity and enhance value.",
-        "Launch a token offering platform for initial coin offerings (ICOS)",
+        "Launch a token offering platform for initial coin offerings (ICOS).",
         "Freeze 11% of the BenefitMine team tokens for two years.",
       ],
     },
@@ -57,7 +57,7 @@ export default function Roadmap() {
       points: [
         "Expand the exchange's trading pairs, including fiat currencies and stablecoins.",
         "Launch of $BFM token at Coinstore Exchange",
-        "Partnership with major projects to enhance the use case of BFM token",
+        "Partnership with major projects to enhance the use case of BFM token.",
         "Introduce the BenefitMine Investment platform with staking options",
       ],
     },
@@ -72,7 +72,7 @@ export default function Roadmap() {
     {
       title: "PHASE 7",
       points: [
-        "Unveil Centralized Exchange (CEX) real version (trade on live price with real assets)",
+        "Unveil Centralized Exchange (CEX) real version (trade on live price with real assets).",
         "Launch additional features and improvements to enhance the BenefitMine ecosystem.",
         "Continue to innovate and adapt to evolving market trends and user needs.",
       ],
