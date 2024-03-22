@@ -168,7 +168,7 @@ const Navbar = () => {
    
 
 <a
-     href="https://presale.benefitmine.io/" target="_blank" className=" relative inline-flex items-center px-[1.5rem] md:px-[2rem]  py-[0.1rem] md:py-[0.4rem] overflow-hidden text-lg font-medium text-secondary border-2 border-primary rounded-full hover:text-black group hover:bg-black
+     href="/" target="_blank" className=" relative inline-flex items-center px-[1.5rem] md:px-[2rem]  py-[0.1rem] md:py-[0.4rem] overflow-hidden text-lg font-medium text-secondary border-2 border-primary rounded-full hover:text-black group hover:bg-black
     ">
 <span className="absolute left-0 block w-full h-0 transition-all bg-primary opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease
  bg-gradient-to-br from-[#ff8a05] via-primary to-[#633a02] group-hover:from-[#ffddad] group-hover:via-primary group-hover:to-[#8a5102] 

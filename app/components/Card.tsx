@@ -26,8 +26,8 @@ export default function Card({ one }: any) {
         },
       },
     }} className=" flex items-center rounded-xl justify-center p-8">
-      <PinContainer title={one.href} href={one.href}>
       <Link href={one.href} target="_blank">
+      <PinContainer title={one.titleHref} href={one.href}>
         <motion.div
          variants={FADE_DOWN_ANIMATION_VARIANTS}
         className="card w-[16em] h-[17em] sm:w-[20em] sm:h-[19em] rounded-xl shadow-xl border border-primary ">
@@ -43,8 +43,8 @@ export default function Card({ one }: any) {
             </div>
           </motion.div>
         </motion.div>
-        </Link>
       </PinContainer>
+        </Link>
     </motion.div>
   );
 }

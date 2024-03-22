@@ -42,7 +42,7 @@ function Security() {
                     <source src={"/cyberscope.mp4"} />
                   </video>
     </motion.div>
-    <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="flex flex-col  gap-5 mb-32 md:mt-32">
+    <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS} className="flex flex-col  gap-5 mb-32 md:mt-32 relative z-10">
       <h1 className=" md:text-[2.6rem] text-[2rem] font-medium text-secondary text-start">
         Your assets, <strong className="text-[#F89B1F]">secured</strong>
       </h1>

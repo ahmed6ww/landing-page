@@ -39,11 +39,118 @@ export default function Trustless() {
           },
         }}
       >
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6 mb-4">
+
+
+<div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[90%] top-[150rem]  md:top-[120rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#f89b1c]    green blur-[120px] md:blur-[160px] rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+              <div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[175rem]  md:top-[105rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#2cc4f5]  green blur-[120px] md:blur-[160px]   rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+{/*           */}
+
+<div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[90%] top-[235rem]  md:top-[150rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#2cc4f5]   green blur-[120px] md:blur-[160px] rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+              <div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[205rem]  md:top-[135rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#f89b1c]  green blur-[120px] md:blur-[160px]   rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+{/*      */}
+
+<div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[90%] top-[265rem] md:top-[190rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#f89b1c]    green blur-[120px] md:blur-[160px] rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+              <div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[308rem]  md:top-[180rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#2cc4f5]  green blur-[120px] md:blur-[160px]   rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+
+{/*         team    */}
+
+
+<div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[90%] top-[365rem] md:top-[230rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#2cc4f5]    green blur-[120px] md:blur-[160px] rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+              <div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[340rem]  md:top-[220rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#f89b1c]  green blur-[120px] md:blur-[160px]   rounded-full absolute h-[7em] w-[7em]  md:h-[15em] md:w-[15em]"></div>
+
+              </div>
+
+
+{/*         security    */}
+
+
+<div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[90%] top-[385rem] md:top-[270rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#f89b1c]    green blur-[120px] md:blur-[140px] rounded-full absolute h-[7em] w-[7em]  md:h-[10em] md:w-[10em]"></div>
+
+              </div>
+
+              <div
+                
+                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[406rem]  md:top-[260rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#2cc4f5]  green blur-[120px] md:blur-[160px]   rounded-full absolute h-[7em] w-[7em]  md:h-[10em] md:w-[10em]"></div>
+
+              </div>
+
+
+
+
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6 mb-4 relative z-10">
           <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16 font-bold md:gap-5 gap-0 text-center justify-center  mt-25 ">
             <motion.h1
               variants={FADE_DOWN_ANIMATION_VARIANTS}
-              className="text-secondary text-[3.5rem] font-bold"
+              className="text-secondary text-[3.5rem] font-bold z-10"
             >
               Our <span className="text-[#F89B1F]">Team</span>
             </motion.h1>
@@ -53,7 +160,7 @@ export default function Trustless() {
             className="flex flex-col  items-center justify-center  md:mt-31 gap-[2.5rem] md:gap-[5rem] "
           >
 
-            <div className="flex md:flex-row flex-col gap-10 md:gap-[20rem]">
+            <div className="flex md:flex-row flex-col gap-10 md:gap-[20rem] z-11">
               <div className="text-center text-secondary">
                 <img
                   className="mx-auto mb-4 w-40 h-40 rounded-full border-2 "

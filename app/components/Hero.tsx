@@ -14,18 +14,21 @@ export default function Hero() {
     para: "Join our socials to stay updated on the latest project news and developments!",
     button: "Join Now",
     href: "https://linktr.ee/BenefitMine",
+    titleHref: "Socials"
   };
   const cardProps2 = {
-    title: "Testnet",
-    para: "Explore our platform, gain experience, and practice trading risk-free.",
-    button: "Start Now",
-    href: "https://testnet.benefitmine.io",
+    title: "Staking",
+    para: "Explore our staking, gain and grow your BFM holding.",
+    button: "Stake Now",
+    href: "https://staking.benefitmine.io",
+     titleHref: "Staking"
   };
   const cardProps3 = {
     title: "Earn From Company Income",
     para: "Participate in our token burning mechanism and receive a share of the Exchange Income.",
     button: "Read Whitepaper",
     href: "https://benefitmine-organization.gitbook.io",
+    titleHref: "Whitepaper"
   };
 
   const { ref, inView } = useInView({
@@ -35,7 +38,7 @@ export default function Hero() {
   return (
     <>
       <section id="/">
-        {/* <BackgroundGradientAnimation className="h-[10rem]"> */}
+    
         <div className="min-h-screen min-w-screen text-white overflow-x-hidden z-10">
           {/* text */}
           <div>
@@ -46,7 +49,7 @@ export default function Hero() {
               viewport={{ once: true }}
               variants={{
                 hidden: {},
-                show: {
+                 show: {
                   transition: {
                     staggerChildren: 0.15,
                   },
@@ -97,31 +100,7 @@ export default function Hero() {
                 </motion.p>
               </div>
               <div>
-                {/* <Link href="https://presale.benefitmine.io/" target="_blank">
-                  <motion.button
-                    variants={FADE_DOWN_ANIMATION_VARIANTS}
-                    className=" relative inline-flex mt-6 md:mt-4 h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-                  >
-                    <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ffcc00_0%,#EBECF0_50%,#f89b1f_100%)] " />
-                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-[1.5rem] py-[1rem] md:text-[1rem] text-[0.8rem]  text-white backdrop-blur-3xl font-semibold">
-                      BUY $BFM
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="ml-[0.25rem] w-5 h-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                        />
-                      </svg>
-                    </span>
-                  </motion.button>
-                </Link> */}
+              
 
                 <motion.a
                   variants={FADE_DOWN_ANIMATION_VARIANTS}
@@ -139,23 +118,21 @@ export default function Hero() {
             </motion.div>
             {/* Second Heading */}
             <div className="text-[0.9rem] mt-[-1rem]  flex font-bold text-center justify-center">
-              {/* <h1 className="text-[#f89b1f]">Your Business</h1>
-          <h2 className=" ">Our Responsibility</h2> */}
-              {/* <TypewriterEffectSmoothDemo /> */}
+           
             </div>
           </div>
 
           {/* Cards */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 place-items-center mt-20 "> */}
+       
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-[7em]   ">
             <Card one={cardProps1} />
-            <Card one={cardProps2} />
+            <Card one={cardProps2}  />
             <div className="md:col-span-2 flex justify-center xl:col-span-1">
-              <Card one={cardProps3} />
+              <Card one={cardProps3}  />
             </div>
           </div>
         </div>
-        {/* </BackgroundGradientAnimation> */}
+  
       </section>
     </>
   );

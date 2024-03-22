@@ -57,23 +57,10 @@ const Form = () => {
       <div className="hero min-h-[40em]  bg-black ">
 
 
-        <div className="  flex justify-center z-0 absolute min-h-screen w-[90%]  left-[-2rem] md:left-0">
-          <div className="bg-[#f89b1c]  green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
-        </div>
+    
 
-        <div className="  flex justify-center z-0 absolute min-h-screen w-[30%]   ml-[-75rem]">
-          <div className=" bg-[#2cc4f5] green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
-        </div>
-        <div className="  flex justify-center z-0 absolute min-h-screen w-[90%]  left-[-2rem] md:left-[-20rem]">
-          <div className="bg-[#2cc4f5] green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
-        </div>
-
-        <div className="  flex justify-center z-0 absolute min-h-screen w-[30%]   ml-[-40rem]">
-          <div className=" bg-[#f89b1c]  green blur-[100px]  rounded-full absolute h-[14em] w-[14em] md:h-[14em] md:w-[14em] lg:h-[14em] lg:w-[14em] "></div>
-        </div>
-
-
-        <div className="hero-content flex-col lg:flex-row-reverse z-110 ">
+        <div className="hero-content flex-col lg:flex-row-reverse  ">
+        
           <motion.div
             ref={ref}
             initial="hidden"
@@ -81,21 +68,38 @@ const Form = () => {
             animate={inView ? "show" : "hidden"}
             className="text-center lg:text-left lg:ml-20 xl:ml-32 "
           >
+              <div
+                
+                className="  flex justify-center z-10 absolute min-h-screen w-[90%] top-[784rem] sm:top-[502rem]  md:top-[502rem] left-[-2rem] md:left-0"
+              >
+                
+                <div className="bg-[#2cc4f5]    green blur-[140px]  sm:blur-[140px] md:blur-[150px] rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
+
+              </div>
+
+              <div
+              
+                className="  flex justify-center z-10 absolute min-h-screen w-[0%] top-[760rem] sm:top-[505rem] md:top-[505rem] ml-[5rem] md:ml-[-16rem]"
+              >
+               
+                <div className=" bg-[#f89b1c]  green blur-[140px] sm:blur-[140px] md:blur-[150px]   rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
+
+              </div>
             <motion.h1
               variants={fadeInUP}
-              className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold "
+              className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold relative z-10"
             >
               STAY UP TO DATE WITH ALL THE LATEST NEWS
             </motion.h1>
             <motion.p
               variants={fadeInUP}
-              className="py-6 text-secondary font-sans"
+              className="py-6 text-secondary font-sans relative z-10"
             >
               SIGN UP BELOW TO RECEIVE ALL THE LATEST UPDATES FROM BENEFIT MINE
               HQ
             </motion.p>
           </motion.div>
-          <div className="card shrink-0 w-[15em] xs:w-[20em]  md:w-[25em]  flex  max-w-sm shadow-2xl border text-secondary border-primary">
+          <div className="card shrink-0 w-[15em] xs:w-[20em]  md:w-[25em]  flex  max-w-sm shadow-2xl border text-secondary border-primary relative z-10">
             <form className="card-body" onSubmit={formik.handleSubmit}>
               <div className="form-control">
                 <label htmlFor="email" className="label">
