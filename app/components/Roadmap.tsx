@@ -17,7 +17,7 @@ export default function Roadmap() {
 
   const phases: Phase[] = [
     {
-      title: "PHASE 1",
+      title: "PHASE 1 (Completed)",
       points: [
         "Create social channels to promote BenefitMine (BFM) project.",
         "Develop the project whitepaper outlining its objectives and features.",
@@ -26,16 +26,15 @@ export default function Roadmap() {
       ],
     },
     {
-      title: "PHASE 2",
+      title: "PHASE 2 (Completed)",
       points: [
         "Develop a detailed project plan and allocate resources.",
+        "Begin the development of the BFM Payment Gateway",
         "Begin the development of Centralized Exchange (CEX) V1 with peer-to-peer, Spot, and over-the-counter trading functionalities.",
-        "Build the exchange's infrastructure, including servers, APIs, and databases.",
-        "Develop the user interface and experience, including trading charts, order books, and portfolio management tools.",
       ],
     },
     {
-      title: "PHASE 3",
+      title: "PHASE 3 (Completed)",
       points: [
         "Test and optimize the platform's performance, including speed, scalability, and uptime.",
         "Launch new BFM token website.",
@@ -44,35 +43,36 @@ export default function Roadmap() {
       ],
     },
     {
-      title: "PHASE 4",
+      title: "PHASE 4 (Completed)",
       points: [
         "Conduct a 1,000,000 BFM token airdrop to the private Telegram community.",
+        "Launch a private sale of tokens of the core community and supporters",
         "Freeze 50% of the tokens for two years to create scarcity and enhance value.",
         "Launch a token offering platform for initial coin offerings (ICOS)",
         "Freeze 11% of the BenefitMine team tokens for two years.",
       ],
     },
     {
-      title: "PHASE 5",
+      title: "PHASE 5 (Completed)",
       points: [
-        "Launch an initial Exchange offering (IEOs) in popular Exchange.",
         "Expand the exchange's trading pairs, including fiat currencies and stablecoins.",
-        "List token in CMC, Coin Gecko.",
-        "Launch token in 3 popular Exchanges.",
+        "Launch of $BFM token at Coinstore Exchange",
+        "Partnership with major projects to enhance the use case of BFM token",
+        "Introduce the BenefitMine Investment platform with staking options",
       ],
     },
     {
       title: "PHASE 6",
       points: [
-        "Implement an advertising program to attract new users and increase trading volumes.",
+        "Launch a Crypto Payment Gateway backed by $BFM Token.",
+        "Implement a strong program to attract new users and icrease trading volumes",
         "Continuously improve the platform's security and performance to maintain user trust and satisfaction.",
-        "Introduce the BenefitMine Investment platform with staking options.",
-        "Unveil Centralized Exchange (CEX) real version (trade on live price with real assets)",
       ],
     },
     {
       title: "PHASE 7",
       points: [
+        "Unveil Centralized Exchange (CEX) real version (trade on live price with real assets)",
         "Launch additional features and improvements to enhance the BenefitMine ecosystem.",
         "Continue to innovate and adapt to evolving market trends and user needs.",
       ],
