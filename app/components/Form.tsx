@@ -54,37 +54,36 @@ const Form = () => {
 
   return (
     <section id="Signup">
-      <div className="hero min-h-[40em]  bg-black ">
-
-
-    
-
+      <div className="hero min-h-[40em]  bg-transparent ">
         <div className="hero-content flex-col lg:flex-row-reverse  ">
         
-          <motion.div
+
+            
+<div className="  flex justify-center z-10 absolute min-h-screen w-[90%] top-[714rem] sm:top-[502rem]  md:top-[450rem] left-[-2rem] md:left-0">
+              <div className="bg-[#f89b1c]    green blur-[140px]  sm:blur-[140px] md:blur-[160px] rounded-full absolute h-[12em] w-[12em]  md:h-[14em] md:w-[14em]"></div>
+            </div>
+
+            <div className="  flex justify-center z-10 absolute min-h-screen w-[0%] top-[700rem] sm:top-[505rem] md:top-[460rem] ml-[5rem] md:ml-[-16rem]">
+              <div className=" bg-[#2cc4f5]  green blur-[140px] sm:blur-[140px] md:blur-[160px]   rounded-full absolute h-[12em] w-[12em]  md:h-[14em] md:w-[14em]"></div>
+            </div>
+            
+{/*      2         */}
+
+            <div className="  flex justify-center z-10 absolute min-h-screen w-[90%] top-[784rem] sm:top-[502rem]  md:top-[506rem] left-[-2rem] md:left-0">
+              <div className="bg-[#2cc4f5]    green blur-[140px]  sm:blur-[140px] md:blur-[150px] rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
+            </div>
+
+            <div className="  flex justify-center z-10 absolute min-h-screen w-[0%] top-[760rem] sm:top-[505rem] md:top-[510rem] ml-[5rem] md:ml-[-16rem]">
+              <div className=" bg-[#f89b1c]  green blur-[140px] sm:blur-[140px] md:blur-[150px]   rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
+            </div>
+
+  <motion.div
             ref={ref}
             initial="hidden"
             variants={fadeInUP}
             animate={inView ? "show" : "hidden"}
             className="text-center lg:text-left lg:ml-20 xl:ml-32 "
           >
-              <div
-                
-                className="  flex justify-center z-10 absolute min-h-screen w-[90%] top-[784rem] sm:top-[502rem]  md:top-[502rem] left-[-2rem] md:left-0"
-              >
-                
-                <div className="bg-[#2cc4f5]    green blur-[140px]  sm:blur-[140px] md:blur-[150px] rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
-
-              </div>
-
-              <div
-              
-                className="  flex justify-center z-10 absolute min-h-screen w-[0%] top-[760rem] sm:top-[505rem] md:top-[505rem] ml-[5rem] md:ml-[-16rem]"
-              >
-               
-                <div className=" bg-[#f89b1c]  green blur-[140px] sm:blur-[140px] md:blur-[150px]   rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
-
-              </div>
             <motion.h1
               variants={fadeInUP}
               className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold relative z-10"
