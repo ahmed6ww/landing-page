@@ -70,7 +70,7 @@ const Form = () => {
           >
               <div
                 
-                className="  flex justify-center z-10 absolute min-h-screen w-[90%] top-[805rem] sm:top-[502rem]  md:top-[502rem] left-[-2rem] md:left-0"
+                className="  flex justify-center z-10 absolute min-h-screen w-[90%] top-[784rem] sm:top-[502rem]  md:top-[502rem] left-[-2rem] md:left-0"
               >
                 
                 <div className="bg-[#2cc4f5]    green blur-[140px]  sm:blur-[140px] md:blur-[150px] rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
@@ -79,7 +79,7 @@ const Form = () => {
 
               <div
               
-                className="  flex justify-center z-10 absolute min-h-screen w-[0%] top-[785rem] sm:top-[505rem] md:top-[505rem] ml-[5rem] md:ml-[-16rem]"
+                className="  flex justify-center z-10 absolute min-h-screen w-[0%] top-[760rem] sm:top-[505rem] md:top-[505rem] ml-[5rem] md:ml-[-16rem]"
               >
                
                 <div className=" bg-[#f89b1c]  green blur-[140px] sm:blur-[140px] md:blur-[150px]   rounded-full absolute h-[12em] w-[12em]  md:h-[18em] md:w-[18em]"></div>
