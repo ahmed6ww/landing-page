@@ -131,3 +131,28 @@
   60% {top: 250px; right: 100px;transform: scale(1);}
   100% {top: 250px; right: 0px; transform: scale(1);}
 }
+
+
+*::-webkit-media-controls-panel {
+
+  display: none!important;
+
+  -webkit-appearance: none;
+
+}
+
+*::--webkit-media-controls-play-button {
+
+  display: none!important;
+
+  -webkit-appearance: none;
+
+}
+
+*::-webkit-media-controls-start-playback-button {
+
+  display: none!important;
+
+  -webkit-appearance: none;
+
+}

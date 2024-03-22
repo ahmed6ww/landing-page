@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Variants, motion } from "framer-motion";
-
+import Form from "@/app/components/Form";
 import { useInView } from "react-intersection-observer";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/fade-animation"
 
@@ -10,7 +10,8 @@ const Accordion = () => {
     triggerOnce: true,
   });
   return (
-    <section id="Faqs" className=" overflow-x-hidden overflow-y-hidden relative z-20 mt-35 bg-black  dark:bg-dark  ">
+    <>
+    <section id="Faqs" className=" overflow-x-hidden overflow-y-hidden relative z-10  mt-[2rem]   ">
       <motion.div
        ref={ref}
       initial="hidden"
@@ -26,7 +27,7 @@ const Accordion = () => {
       }} className=" flex flex-col items-center justify-center">
         <div>
 
-        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 block text-[3.5rem] font-bold text-primary relative z-10">
+        <motion.h1 variants={FADE_DOWN_ANIMATION_VARIANTS}  className="mb-2 mt-[2rem] block text-[3.5rem] font-bold text-primary relative z-10">
           FAQ ' S
         </motion.h1>
         </div>
@@ -36,25 +37,11 @@ const Accordion = () => {
 
         
 
-        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}  className=" mt-20  md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out relative z-20">
+        <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}  className=" mt-20   md:gap-20 flex flex-col md:flex-row duration-1000 ease-in-out relative z-10">
           <div className="">
-          <div
-                
-                className="  flex justify-center z-0 absolute min-h-screen w-[120%] top-[24rem] md:top-[0rem] left-[-2rem] md:left-0"
-              >
-                
-                <div className="bg-[#f89b1c]    green blur-[150px] md:blur-[150px] rounded-full absolute h-[12em] w-[12em]  md:h-[15em] md:w-[15em]"></div>
+        
 
-              </div>
-
-              <div
               
-                className="  flex justify-center z-0 absolute min-h-screen w-[30%] top-[-4rem]  md:top-[-14rem] ml-[5rem] md:ml-[-16rem]"
-              >
-               
-                <div className=" bg-[#2cc4f5]  green blur-[150px] md:blur-[150px]   rounded-full absolute h-[12em] w-[12em]  md:h-[15em] md:w-[15em]"></div>
-
-              </div>
             <AccordionItem
               header="What is Benefit Mine?"
               text="Benefit Mine is a leading cryptocurrency exchange platform that offers secure, transparent, and reliable services for trading various types of cryptocurrencies. Our platform aims to provide a user-friendly environment for both beginner and experienced traders to buy, sell, and trade digital assets."
@@ -111,36 +98,10 @@ const Accordion = () => {
         </motion.div>
       </motion.div>
 
-      {/* <div className="absolute md:top-40 z-[-2] md:left-0 bottom-0">
-        <svg
-          width="1240"
-          height="426"
-          viewBox="0 0 1440 886"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            opacity="0.2"
-            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
-            fill="url(#paint0_linear)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear"
-              x1="1308.65"
-              y1="1142.58"
-              x2="602.827"
-              y2="-418.681"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#3056D3" stop-opacity="0.36" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div> */}
+ 
     </section>
+      
+      </>
   );
 };
 
