@@ -99,7 +99,7 @@ export default function Roadmap() {
         >
           <motion.h1
             variants={FADE_DOWN_ANIMATION_VARIANTS}
-            className="text-white text-[3.5rem] font-bold relative z-20"
+            className="text-secondary text-[3.5rem] font-bold relative z-20"
           >
             Our <span className="text-[#F89B1F]">Roadmap</span>
           </motion.h1>
